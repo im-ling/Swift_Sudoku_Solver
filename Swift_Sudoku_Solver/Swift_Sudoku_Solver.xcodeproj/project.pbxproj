@@ -41,6 +41,7 @@
 		942302E31E9A689B00F312B3 /* DLSolverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DLSolverViewController.swift; sourceTree = "<group>"; };
 		942AE67D1EA0F76D00009CF2 /* UIButton+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
 		942AE67F1EA0FADE00009CF2 /* DLFunctionButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DLFunctionButton.swift; sourceTree = "<group>"; };
+		9431E6B81EA3A32A0010E419 /* SwiftSudokuSolver.mobileprovision */ = {isa = PBXFileReference; lastKnownFileType = file; path = SwiftSudokuSolver.mobileprovision; sourceTree = "<group>"; };
 		94749F7E1EA35604002B6273 /* Swift_Sudoku_Solver.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Swift_Sudoku_Solver.entitlements; sourceTree = "<group>"; };
 		FCEF8C71F4BE928342350A7D /* Pods-Swift_Sudoku_Solver.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swift_Sudoku_Solver.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Swift_Sudoku_Solver/Pods-Swift_Sudoku_Solver.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -87,6 +88,7 @@
 		942302BE1E9A63D000F312B3 /* Swift_Sudoku_Solver */ = {
 			isa = PBXGroup;
 			children = (
+				9431E6B81EA3A32A0010E419 /* SwiftSudokuSolver.mobileprovision */,
 				94749F7E1EA35604002B6273 /* Swift_Sudoku_Solver.entitlements */,
 				942302D11E9A687300F312B3 /* Classes */,
 				942302BF1E9A63D000F312B3 /* AppDelegate.swift */,
@@ -199,7 +201,7 @@
 					942302BB1E9A63D000F312B3 = {
 						CreatedOnToolsVersion = 8.3;
 						DevelopmentTeam = X66X3BGMSJ;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 						SystemCapabilities = {
 							com.apple.Push = {
 								enabled = 1;
@@ -434,8 +436,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.github.Focus.SwiftSudokuSolver;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "2f360d49-fc8a-4fa4-b127-67e3be390849";
+				PROVISIONING_PROFILE_SPECIFIER = SwiftSudokuSolver;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -453,8 +455,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.github.Focus.SwiftSudokuSolver;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "2f360d49-fc8a-4fa4-b127-67e3be390849";
+				PROVISIONING_PROFILE_SPECIFIER = SwiftSudokuSolver;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
