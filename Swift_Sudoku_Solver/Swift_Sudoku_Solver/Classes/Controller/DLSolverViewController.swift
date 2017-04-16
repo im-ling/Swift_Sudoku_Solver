@@ -12,11 +12,19 @@ import SnapKit
 class DLSolverViewController: UIViewController {
     //MARK: LAZY LOAD
     
+    
+    /// 弹出栏
     fileprivate var tipAlertViewController:UIAlertController?
     
+
+    /// 是否正在解答
     fileprivate var isSolving:Bool = false
     
+    /// 记录当前选中的数字
     fileprivate var currentNumber = 0
+    
+    
+    /// testMap
     var puzzleMap: [[Int]] = [[9,0,0, 5,0,0, 0,0,0],
                               [0,0,0, 0,0,0, 1,0,7],
                               [0,0,0, 2,0,0, 0,0,0],
@@ -29,6 +37,7 @@ class DLSolverViewController: UIViewController {
                               [0,3,6, 9,0,0, 0,0,0],
                               [0,0,2, 3,0,1, 0,4,0]]
     
+    /// another testMap
     var toughMap: [[Int]] = [[2,0,0, 6,0,0, 0,0,0],
                              [0,0,0, 0,5,0, 9,3,0],
                              [0,0,0, 0,0,0, 2,7,8],
@@ -41,6 +50,8 @@ class DLSolverViewController: UIViewController {
                              [0,0,3, 0,0,2, 0,6,0],
                              [0,0,9, 8,0,6, 1,0,0]]
     
+    
+    /// 井字图
     fileprivate lazy var cageView:UIImageView = {
         let imageView = UIImageView(image: UIImage(named: "normal-cage-x20"))
         imageView.isUserInteractionEnabled = true
@@ -49,6 +60,8 @@ class DLSolverViewController: UIViewController {
         return imageView
     }()
     
+    
+    /// 81个数字对应button
     fileprivate lazy var buttonMap: [[DLNumberButton]] = {
         var tempMap = [[DLNumberButton]]()
         for i in 0..<9{
@@ -63,10 +76,16 @@ class DLSolverViewController: UIViewController {
         return tempMap
     }()
     
+    
+    /// 点击81个数字button
+    ///
+    /// - Parameter numberBtn: 点击的button
     @objc fileprivate func numberButtonClick(numberBtn: DLNumberButton){
         numberBtn.number = currentNumber
     }
     
+    
+    /// 底部1-9，9个数字button
     fileprivate lazy var bottomButtonArray:[DLNumberButton] = {
         var tempArray = [DLNumberButton]()
         for i in 1...9{
@@ -78,29 +97,48 @@ class DLSolverViewController: UIViewController {
         return tempArray
     }()
     
+    
+    /// 底部数字button点击事件
+    ///
+    /// - Parameter bottomBtn: 底部button
     @objc fileprivate func bottomButtonClick(bottomBtn:DLNumberButton){
-        if lastBottomBtn == bottomBtn {
+        if isLastButton(button: bottomBtn) {
             return
         }
-        lastBottomBtn?.layer.borderWidth = 0
         currentNumber = bottomBtn.number
-        bottomBtn.layer.borderWidth = 2
-        bottomBtn.layer.borderColor = UIColor.white.cgColor
-        lastBottomBtn = bottomBtn
     }
     
-    fileprivate var lastBottomBtn: DLNumberButton?
     
-    fileprivate lazy var solveButton:UIButton = {
-        let buttton = UIButton()
-        buttton.layer.cornerRadius = 8.0
-        buttton.layer.masksToBounds = true
-        buttton.setBackgroundImage(UIImage(named:"iphonetall-background-wood-x10"), for: .normal)
-        buttton.setTitle("Solve", for: .normal)
-        buttton.addTarget(self, action: #selector(solvePuzzle), for: .touchUpInside)
-        return buttton
+    /// 检查是否和上个button相同
+    ///
+    /// - Parameter button: 一个button
+    /// - Returns: 是否和上次点击的button一样
+    @discardableResult
+    fileprivate func isLastButton(button:UIButton)->Bool{
+        if lastBottomBtn == button {
+            return true
+        }
+        lastBottomBtn?.layer.borderWidth = 0
+        button.layer.borderWidth = 2
+        button.layer.borderColor = UIColor.white.cgColor
+        lastBottomBtn = button
+        return false
+    }
+    
+    
+    /// 上次button
+    fileprivate var lastBottomBtn: UIButton?
+    
+    
+    /// solveButton
+    fileprivate lazy var solveButton:DLFunctionButton = {
+        let button = DLFunctionButton(title: "Solve", target: self, action: #selector(solvePuzzle))
+        //custom code
+        return button
     }()
     
+    
+    /// eraserButton 橡皮擦
     fileprivate lazy var eraserButton:UIButton = {
         let buttton = DLNumberButton()
         buttton.layer.cornerRadius = 8.0
@@ -109,20 +147,25 @@ class DLSolverViewController: UIViewController {
         buttton.setTitle("Earser", for: .normal)
         buttton.addTarget(self, action: #selector(bottomButtonClick(bottomBtn:)), for: .touchUpInside)
         return buttton
+    }()
+    
+    /// 清除所有
+    fileprivate lazy var cleanButton:DLFunctionButton = {
+        let button = DLFunctionButton(title: "Clean", target: self, action: #selector(cleanButtonClick))
+        return button
+    }()
+    
+    
+    /// 清除所有点击事件
+    ///
+    /// - Parameter button: 清除所有
+    @objc fileprivate func cleanButtonClick(button:DLFunctionButton){
         
-    }()
-    
-    fileprivate lazy var cleanButton:UIButton = {
-        let buttton = UIButton()
-        buttton.layer.cornerRadius = 8.0
-        buttton.layer.masksToBounds = true
-        buttton.setBackgroundImage(UIImage(named:"iphonetall-background-wood-x10"), for: .normal)
-        buttton.setTitle("Clear", for: .normal)
-        buttton.addTarget(self, action: #selector(cleanButtonClick), for: .touchUpInside)
-        return buttton
-    }()
-    
-    @objc fileprivate func cleanButtonClick(){
+        if isLastButton(button: button){
+            return
+        }
+        currentNumber = -1;
+        
         for oneline in buttonMap {
             for element in oneline {
                 element.number = 0
@@ -130,15 +173,32 @@ class DLSolverViewController: UIViewController {
         }
     }
     
-    fileprivate lazy var checkButton:UIButton = {
-        let buttton = UIButton()
-        buttton.layer.cornerRadius = 8.0
-        buttton.layer.masksToBounds = true
-        buttton.setBackgroundImage(UIImage(named:"iphonetall-background-wood-x10"), for: .normal)
-        buttton.setTitle("Check", for: .normal)
-        buttton.addTarget(self, action: #selector(checkPuzzle), for: .touchUpInside)
-        return buttton
+
+    
+    /// 检查button
+    fileprivate lazy var checkButton:DLFunctionButton = {
+        let button = DLFunctionButton(title: "Check", target: self, action: #selector(checkPuzzle))
+        return button
+
     }()
+    
+    fileprivate lazy var nextButton:DLFunctionButton = {
+        let button = DLFunctionButton(title: "Next", target: self, action: #selector(nextButtonClick(button:)))
+        return button
+    }()
+
+    @objc func nextButtonClick(button:DLFunctionButton){
+        isLastButton(button: button)
+    }
+    
+    fileprivate lazy var prevButton:DLFunctionButton = {
+        let button = DLFunctionButton(title: "Prev", target: self, action: #selector(prevButtonClick(button:)))
+        return button
+    }()
+    
+    @objc func prevButtonClick(button:DLFunctionButton){
+        isLastButton(button: button)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -146,11 +206,15 @@ class DLSolverViewController: UIViewController {
     }
     
     
+    
+    
     //MARK: UI搭建
     fileprivate func setupUI(){
         setupNav()
         view.backgroundColor = UIColor(patternImage: UIImage(named: "iphonetall-background-x13")!)
         
+        
+        //setupMiddleView
         view.addSubview(cageView)
         cageView.snp.makeConstraints { (make) in
             make.center.equalTo(view)
@@ -162,7 +226,7 @@ class DLSolverViewController: UIViewController {
         addButtonMap(smallMargin:cageView.width / 200 , largeMargin:cageView.width * 0.02, targetView:cageView)
         
         
-        
+        //setUpBottom 9 button
         let bottomButtonArrayView = UIView()
         view.addSubview(bottomButtonArrayView)
         
@@ -216,6 +280,19 @@ class DLSolverViewController: UIViewController {
             make.right.equalTo(cageView).offset(-margin)
         }
         
+//        view.addSubview(nextButton)
+//        nextButton.snp.makeConstraints { (make) in
+//            make.size.equalTo(funcButtonSize)
+//            make.top.equalTo(bottomButtonArrayView.snp.bottom).offset(margin)
+//            make.right.equalTo(view).offset(-margin)
+//        }
+        
+//        view.addSubview(prevButton)
+//        prevButton.snp.makeConstraints { (make) in
+//            make.size.equalTo(funcButtonSize)
+//            make.right.equalTo(nextButton.snp.left).offset(-margin)
+//            make.top.equalTo(nextButton)
+//        }
         
         numberMapToButtonMap(numberMap: puzzleMap,buttonMap: buttonMap)
         
@@ -281,7 +358,16 @@ extension DLSolverViewController{
         return numberMap
     }
     
-    @objc fileprivate func solvePuzzle(){
+    
+    /// 解答
+    ///
+    /// - Parameter button: 解答button
+    @objc fileprivate func solvePuzzle(button:DLFunctionButton){
+        if !isLastButton(button: button){
+            currentNumber = -1
+        }
+        
+        
         if isSolving {
             tipAlertViewController = UIAlertController(title: "Solving~", message: "The puzzle is solving,please wait a moment~", preferredStyle: .alert)
             let cancelAction = UIAlertAction(title: "Okay~", style: .cancel, handler: nil)
@@ -314,7 +400,17 @@ extension DLSolverViewController{
             }
         }
     }
-    @objc fileprivate func checkPuzzle(){
+    
+    
+    /// 检查
+    ///
+    /// - Parameter button: 检查button点击
+    @objc fileprivate func checkPuzzle(button:DLFunctionButton){
+        if !isLastButton(button: button){
+            currentNumber = -1
+        }
+
+        
         if isSolving {
             tipAlertViewController = UIAlertController(title: "Solving~", message: "The puzzle is solving,please wait a moment~", preferredStyle: .alert)
             let cancelAction = UIAlertAction(title: "Okay~", style: .cancel, handler: nil)

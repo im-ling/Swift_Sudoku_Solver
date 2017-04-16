@@ -11,15 +11,6 @@ import UIKit
 let ScreenWidth:CGFloat = UIScreen.main.bounds.size.width
 let ScreenHeight:CGFloat = UIScreen.main.bounds.size.height
 
-//MARK: Notification
-let SwitchRootVcNotificaiton = "SwitchRootVcNotificaiton"
-
-
-let HomeCellMargin: CGFloat = 10.0
-
-
-let  homePictureViewcellid = "8"
-
 func RandomColor() -> UIColor {
     let red = CGFloat(arc4random_uniform(256)) / 255.0
     let green = CGFloat(arc4random_uniform(256)) / 255.0

@@ -16,10 +16,12 @@ class DLNumberButton: UIButton {
                 UIView.animate(withDuration: 0.25, animations: {
                     self.setBackgroundImage(UIImage(named:"normal-tilette-\(self.number)-x20"), for: .normal)
                 })
-            }else {
+            }else if number == 0 {
                 UIView.animate(withDuration: 0.25, animations: { 
                     self.setBackgroundImage(UIImage(named:"normal-shadow-x20"), for: .normal)
                 })
+            }else{
+                number = oldValue
             }
         }
     }
