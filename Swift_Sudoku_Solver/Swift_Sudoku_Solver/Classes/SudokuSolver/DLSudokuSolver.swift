@@ -16,8 +16,6 @@ class DLSudokuSolver: NSObject {
         super.init()
     }
     
-    
-    
     //MARK: lazyLoad
     
     var isUnavailableMap = false
