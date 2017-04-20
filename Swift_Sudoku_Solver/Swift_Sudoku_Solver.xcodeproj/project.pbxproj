@@ -21,6 +21,7 @@
 		942302E41E9A689B00F312B3 /* DLSolverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942302E31E9A689B00F312B3 /* DLSolverViewController.swift */; };
 		942AE67E1EA0F76D00009CF2 /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942AE67D1EA0F76D00009CF2 /* UIButton+Extension.swift */; };
 		942AE6801EA0FADE00009CF2 /* DLFunctionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942AE67F1EA0FADE00009CF2 /* DLFunctionButton.swift */; };
+		94A0C2431EA5FB8E0010BF85 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 94A0C2451EA5FB8E0010BF85 /* Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,16 +33,19 @@
 		942302C41E9A63D000F312B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		942302C61E9A63D000F312B3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		942302C91E9A63D000F312B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		942302CB1E9A63D000F312B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		942302D31E9A687300F312B3 /* DLCommon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DLCommon.swift; sourceTree = "<group>"; };
 		942302D41E9A687300F312B3 /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		942302D81E9A687300F312B3 /* DLElementNumber.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DLElementNumber.swift; sourceTree = "<group>"; };
 		942302D91E9A687300F312B3 /* DLSudokuSolver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DLSudokuSolver.swift; sourceTree = "<group>"; };
 		942302DC1E9A687300F312B3 /* DLNumberButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DLNumberButton.swift; sourceTree = "<group>"; };
 		942302E31E9A689B00F312B3 /* DLSolverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DLSolverViewController.swift; sourceTree = "<group>"; };
-		9425678B1EA3AEEA0046AB3C /* Swift_Sudoku_Solver.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Swift_Sudoku_Solver.entitlements; sourceTree = "<group>"; };
 		942AE67D1EA0F76D00009CF2 /* UIButton+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
 		942AE67F1EA0FADE00009CF2 /* DLFunctionButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DLFunctionButton.swift; sourceTree = "<group>"; };
+		94A0C2401EA5FAA60010BF85 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
+		94A0C2411EA5FAA60010BF85 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		94A0C2441EA5FB8E0010BF85 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "zh-Hans"; path = "zh-Hans.lproj/Info.plist"; sourceTree = "<group>"; };
+		94A0C2461EA5FB920010BF85 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = en; path = en.lproj/Info.plist; sourceTree = "<group>"; };
+		94A0C2471EA5FBEB0010BF85 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Base; path = Base.lproj/Info.plist; sourceTree = "<group>"; };
 		FCEF8C71F4BE928342350A7D /* Pods-Swift_Sudoku_Solver.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swift_Sudoku_Solver.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Swift_Sudoku_Solver/Pods-Swift_Sudoku_Solver.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -87,14 +91,13 @@
 		942302BE1E9A63D000F312B3 /* Swift_Sudoku_Solver */ = {
 			isa = PBXGroup;
 			children = (
-				9425678B1EA3AEEA0046AB3C /* Swift_Sudoku_Solver.entitlements */,
 				942302D11E9A687300F312B3 /* Classes */,
 				942302BF1E9A63D000F312B3 /* AppDelegate.swift */,
 				942302C11E9A63D000F312B3 /* ViewController.swift */,
 				942302C31E9A63D000F312B3 /* Main.storyboard */,
 				942302C61E9A63D000F312B3 /* Assets.xcassets */,
 				942302C81E9A63D000F312B3 /* LaunchScreen.storyboard */,
-				942302CB1E9A63D000F312B3 /* Info.plist */,
+				94A0C2451EA5FB8E0010BF85 /* Info.plist */,
 			);
 			path = Swift_Sudoku_Solver;
 			sourceTree = "<group>";
@@ -202,7 +205,7 @@
 						ProvisioningStyle = Manual;
 						SystemCapabilities = {
 							com.apple.Push = {
-								enabled = 1;
+								enabled = 0;
 							};
 						};
 					};
@@ -231,6 +234,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94A0C2431EA5FB8E0010BF85 /* Info.plist in Resources */,
 				942302CA1E9A63D000F312B3 /* LaunchScreen.storyboard in Resources */,
 				942302C71E9A63D000F312B3 /* Assets.xcassets in Resources */,
 				942302C51E9A63D000F312B3 /* Main.storyboard in Resources */,
@@ -312,6 +316,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				942302C41E9A63D000F312B3 /* Base */,
+				94A0C2401EA5FAA60010BF85 /* zh-Hans */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -320,8 +325,19 @@
 			isa = PBXVariantGroup;
 			children = (
 				942302C91E9A63D000F312B3 /* Base */,
+				94A0C2411EA5FAA60010BF85 /* zh-Hans */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		94A0C2451EA5FB8E0010BF85 /* Info.plist */ = {
+			isa = PBXVariantGroup;
+			children = (
+				94A0C2441EA5FB8E0010BF85 /* zh-Hans */,
+				94A0C2461EA5FB920010BF85 /* en */,
+				94A0C2471EA5FBEB0010BF85 /* Base */,
+			);
+			name = Info.plist;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -331,6 +347,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -381,6 +398,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -425,7 +443,6 @@
 			baseConfigurationReference = FCEF8C71F4BE928342350A7D /* Pods-Swift_Sudoku_Solver.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = Swift_Sudoku_Solver/Swift_Sudoku_Solver.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Ling Li (926S2V6P73)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = X66X3BGMSJ;
@@ -434,8 +451,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.github.liling.SudokuSolver;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "13d283ee-399e-4133-9b70-ce062529ce4e";
-				PROVISIONING_PROFILE_SPECIFIER = SwiftSudokuSolver;
+				PROVISIONING_PROFILE = "01b7656e-0bec-498f-82e8-95992b16f905";
+				PROVISIONING_PROFILE_SPECIFIER = sudokuProvisioningProfiles;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -445,7 +462,6 @@
 			baseConfigurationReference = 49ADCBFDED3755F298CD58A0 /* Pods-Swift_Sudoku_Solver.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = Swift_Sudoku_Solver/Swift_Sudoku_Solver.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = X66X3BGMSJ;
 				INFOPLIST_FILE = Swift_Sudoku_Solver/Info.plist;
@@ -453,8 +469,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.github.liling.SudokuSolver;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "13d283ee-399e-4133-9b70-ce062529ce4e";
-				PROVISIONING_PROFILE_SPECIFIER = SwiftSudokuSolver;
+				PROVISIONING_PROFILE = "01b7656e-0bec-498f-82e8-95992b16f905";
+				PROVISIONING_PROFILE_SPECIFIER = sudokuProvisioningProfiles;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
