@@ -1,0 +1,12 @@
+/* 
+  Localizable.strings
+  Swift_Sudoku_Solver
+
+  Created by NowOrNever on 21/04/2017.
+  Copyright © 2017 Focus. All rights reserved.
+*/
+
+"solve" = "Solve";
+"earser" = "Eraser";
+"check" = "Check";
+"clean" = "Clean";

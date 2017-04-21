@@ -132,7 +132,7 @@ class DLSolverViewController: UIViewController {
     
     /// solveButton
     fileprivate lazy var solveButton:DLFunctionButton = {
-        let button = DLFunctionButton(title: "Solve", target: self, action: #selector(solvePuzzle))
+        let button = DLFunctionButton(title: "solve".localized(withComment: ""), target: self, action: #selector(solvePuzzle))
         //custom code
         return button
     }()
@@ -144,14 +144,14 @@ class DLSolverViewController: UIViewController {
         buttton.layer.cornerRadius = 8.0
         buttton.layer.masksToBounds = true
         buttton.setBackgroundImage(UIImage(named:"iphonetall-background-wood-x10"), for: .normal)
-        buttton.setTitle("Earser", for: .normal)
+        buttton.setTitle("earser".localized(withComment: ""), for: .normal)
         buttton.addTarget(self, action: #selector(bottomButtonClick(bottomBtn:)), for: .touchUpInside)
         return buttton
     }()
     
     /// 清除所有
     fileprivate lazy var cleanButton:DLFunctionButton = {
-        let button = DLFunctionButton(title: "Clean", target: self, action: #selector(cleanButtonClick))
+        let button = DLFunctionButton(title: "clean".localized(withComment: ""), target: self, action: #selector(cleanButtonClick))
         return button
     }()
     
@@ -177,7 +177,7 @@ class DLSolverViewController: UIViewController {
     
     /// 检查button
     fileprivate lazy var checkButton:DLFunctionButton = {
-        let button = DLFunctionButton(title: "Check", target: self, action: #selector(checkPuzzle))
+        let button = DLFunctionButton(title: "check".localized(withComment: ""), target: self, action: #selector(checkPuzzle))
         return button
 
     }()
