@@ -359,6 +359,7 @@ extension DLSolverViewController{
     }
     
     
+    
     /// 解答
     ///
     /// - Parameter button: 解答button
@@ -368,8 +369,9 @@ extension DLSolverViewController{
         }
         
         
+        
         if isSolving {
-            tipAlertViewController = UIAlertController(title: "Solving~", message: "The puzzle is solving,please wait a moment~", preferredStyle: .alert)
+            tipAlertViewController = UIAlertController(title: "Solving~", message: "solvingMessage".localized(withComment: ""), preferredStyle: .alert)
             let cancelAction = UIAlertAction(title: "Okay~", style: .cancel, handler: nil)
             tipAlertViewController?.addAction(cancelAction)
             self.present(tipAlertViewController!, animated: true, completion: nil)
@@ -390,7 +392,7 @@ extension DLSolverViewController{
                         alertVc.dismiss(animated: true, completion: nil)
                     }
                     
-                    self.tipAlertViewController = UIAlertController(title: "Opps~", message: "The map can't be solve,please try another one~", preferredStyle: .alert)
+                    self.tipAlertViewController = UIAlertController(title: "Opps~", message: "errorMap".localized(withComment: ""), preferredStyle: .alert)
                     let cancelAction = UIAlertAction(title: "Okay~", style: .cancel, handler: nil)
                     self.tipAlertViewController?.addAction(cancelAction)
                     self.present(self.tipAlertViewController!, animated: true, completion: nil)
@@ -412,7 +414,7 @@ extension DLSolverViewController{
 
         
         if isSolving {
-            tipAlertViewController = UIAlertController(title: "Solving~", message: "The puzzle is solving,please wait a moment~", preferredStyle: .alert)
+            tipAlertViewController = UIAlertController(title: "Solving~", message: "solvingMessage".localized(withComment: ""), preferredStyle: .alert)
             let cancelAction = UIAlertAction(title: "Okay~", style: .cancel, handler: nil)
             tipAlertViewController?.addAction(cancelAction)
             self.present(tipAlertViewController!, animated: true, completion: nil)
@@ -430,17 +432,17 @@ extension DLSolverViewController{
                     self.tipAlertViewController?.dismiss(animated: true, completion: nil)
                 }
                 
-                self.tipAlertViewController = UIAlertController(title: "Opps~", message: "The map can't be solve,please try another one~", preferredStyle: .alert)
+                self.tipAlertViewController = UIAlertController(title: "Opps~", message: "errorMap".localized(withComment: ""), preferredStyle: .alert)
                 let cancelAction = UIAlertAction(title: "Okay~", style: .cancel, handler: nil)
                 self.tipAlertViewController?.addAction(cancelAction)
                 if DLSudokuSolver.sharedSudokuSolver.isUnavailableMap{
                 }else{
                     if DLSudokuSolver.sharedSudokuSolver.resultMap.count == 1{
                         self.tipAlertViewController?.title = "Tips:"
-                        self.tipAlertViewController?.message = "This is normal puzzle."
+                        self.tipAlertViewController?.message = "normalMap".localized(withComment: "")
                     }else{
                         self.tipAlertViewController?.title = "Tips:"
-                        self.tipAlertViewController?.message = "There are multi-results for the puzzle."
+                        self.tipAlertViewController?.message = "multi_results".localized(withComment: "")
                     }
                 }
                 self.isSolving = false

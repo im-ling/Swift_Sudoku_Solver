@@ -6,7 +6,14 @@
   Copyright © 2017 Focus. All rights reserved.
 */
 
+"title" = "Sudoku Solver";
+
 "solve" = "Solve";
 "earser" = "Eraser";
 "check" = "Check";
 "clean" = "Clean";
+
+"normalMap" = "This is normal puzzle.";
+"errorMap" = "The map can't be solve,please try another one~";
+"solvingMessage" = "The puzzle is solving,please wait a moment~";
+"multi_results" = "There are multi-results for the puzzle.";
