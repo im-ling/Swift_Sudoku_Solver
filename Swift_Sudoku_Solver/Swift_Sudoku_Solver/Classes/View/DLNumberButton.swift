@@ -15,10 +15,12 @@ class DLNumberButton: UIButton {
             if number >= 1 && number <= 9{
                 UIView.animate(withDuration: 0.25, animations: {
                     self.setBackgroundImage(UIImage(named:"normal-tilette-\(self.number)-x20"), for: .normal)
+                    self.backgroundColor = UIColor(white: 1, alpha: 0.9)
                 })
             }else if number == 0 {
                 UIView.animate(withDuration: 0.25, animations: { 
                     self.setBackgroundImage(UIImage(named:"normal-shadow-x20"), for: .normal)
+                    self.backgroundColor = UIColor.clear
                 })
             }else{
                 number = oldValue
@@ -33,7 +35,9 @@ class DLNumberButton: UIButton {
     
     fileprivate func setupUI(){
         setBackgroundImage(UIImage(named:"normal-shadow-x20"), for: .normal)
-//        backgroundColor = UIColor.blue
+        backgroundColor = UIColor.white
+        layer.cornerRadius = 8
+        layer.masksToBounds = true;
     }
     
     required init?(coder aDecoder: NSCoder) {

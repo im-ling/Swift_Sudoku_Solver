@@ -13,5 +13,4 @@ class DLElementNumber: NSObject {
     var fillNubmer: Int = 0
     var x: Int = 0
     var y: Int = 0
-
 }

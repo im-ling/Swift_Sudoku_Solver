@@ -11,11 +11,22 @@ import UIKit
 class DLFunctionButton: UIButton {
     init(title:String,target:Any?,action:Selector) {
         self.init()
-        setBackgroundImage(UIImage(named:"iphonetall-background-wood-x10"), for: .normal)
+        backgroundColor = UIColor.white
+//        backgroundColor = UIColor.colorWithHex(hex: 0x003466)
+//        backgroundColor = UIColor.colorWithHex(hex: 0x007aff)
+//        backgroundColor = UIColor.colorWithHex(hex: 0x2fbbf3)
+//        setBackgroundImage(UIImage(named:"translucent"), for: .normal)
+//        alpha = 0.75;
         layer.cornerRadius = 8.0
         layer.masksToBounds = true
         setTitle(title, for: .normal)
+//        setTitleColor(UIColor.colorWithHex(hex: 0x2fbbf3), for: .normal)
+        setTitleColor(UIColor.white, for: .normal)
         addTarget(target, action:action, for: .touchUpInside)
+        
+        backgroundColor = UIColor.colorWithHex(hex: 0x007aff)
+        setBackgroundImage(UIImage(), for: .normal)
+
     }
 
     override init(frame: CGRect) {

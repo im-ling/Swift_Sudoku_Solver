@@ -120,7 +120,7 @@ class DLSolverViewController: UIViewController {
         }
         lastBottomBtn?.layer.borderWidth = 0
         button.layer.borderWidth = 2
-        button.layer.borderColor = UIColor.white.cgColor
+        button.layer.borderColor = UIColor.green.cgColor
         lastBottomBtn = button
         return false
     }
@@ -132,7 +132,7 @@ class DLSolverViewController: UIViewController {
     
     /// solveButton
     fileprivate lazy var solveButton:DLFunctionButton = {
-        let button = DLFunctionButton(title: "solve".localized(withComment: ""), target: self, action: #selector(solvePuzzle))
+        let button = DLFunctionButton(title: "solve".localizedString(), target: self, action: #selector(solvePuzzle))
         //custom code
         return button
     }()
@@ -143,15 +143,17 @@ class DLSolverViewController: UIViewController {
         let buttton = DLNumberButton()
         buttton.layer.cornerRadius = 8.0
         buttton.layer.masksToBounds = true
-        buttton.setBackgroundImage(UIImage(named:"iphonetall-background-wood-x10"), for: .normal)
-        buttton.setTitle("earser".localized(withComment: ""), for: .normal)
+        buttton.backgroundColor = UIColor.colorWithHex(hex: 0x007aff)
+        buttton.setBackgroundImage(UIImage(), for: .normal)
+//        buttton.setBackgroundImage(UIImage(named:"iphonetall-background-wood-x10"), for: .normal)
+        buttton.setTitle("earser".localizedString(), for: .normal)
         buttton.addTarget(self, action: #selector(bottomButtonClick(bottomBtn:)), for: .touchUpInside)
         return buttton
     }()
     
     /// 清除所有
     fileprivate lazy var cleanButton:DLFunctionButton = {
-        let button = DLFunctionButton(title: "clean".localized(withComment: ""), target: self, action: #selector(cleanButtonClick))
+        let button = DLFunctionButton(title: "clean".localizedString(), target: self, action: #selector(cleanButtonClick))
         return button
     }()
     
@@ -177,7 +179,7 @@ class DLSolverViewController: UIViewController {
     
     /// 检查button
     fileprivate lazy var checkButton:DLFunctionButton = {
-        let button = DLFunctionButton(title: "check".localized(withComment: ""), target: self, action: #selector(checkPuzzle))
+        let button = DLFunctionButton(title: "check".localizedString(), target: self, action: #selector(checkPuzzle))
         return button
 
     }()
@@ -323,7 +325,12 @@ class DLSolverViewController: UIViewController {
         //        self.navigationController?.navigationBar.isHidden = true
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .top, barMetrics: .default)
         navigationController?.navigationBar.shadowImage = UIImage()
-        title = "Sudoku Solver"
+        let label = UILabel()
+        label.font = UIFont.systemFont(ofSize: 20)
+        label.text = "title".localizedString()
+        label.sizeToFit()
+        label.textColor = UIColor.white
+        navigationItem.titleView = label
     }
     
     
@@ -371,7 +378,7 @@ extension DLSolverViewController{
         
         
         if isSolving {
-            tipAlertViewController = UIAlertController(title: "Solving~", message: "solvingMessage".localized(withComment: ""), preferredStyle: .alert)
+            tipAlertViewController = UIAlertController(title: "Solving~", message: "solvingMessage".localizedString(), preferredStyle: .alert)
             let cancelAction = UIAlertAction(title: "Okay~", style: .cancel, handler: nil)
             tipAlertViewController?.addAction(cancelAction)
             self.present(tipAlertViewController!, animated: true, completion: nil)
@@ -392,7 +399,7 @@ extension DLSolverViewController{
                         alertVc.dismiss(animated: true, completion: nil)
                     }
                     
-                    self.tipAlertViewController = UIAlertController(title: "Opps~", message: "errorMap".localized(withComment: ""), preferredStyle: .alert)
+                    self.tipAlertViewController = UIAlertController(title: "Opps~", message: "errorMap".localizedString(), preferredStyle: .alert)
                     let cancelAction = UIAlertAction(title: "Okay~", style: .cancel, handler: nil)
                     self.tipAlertViewController?.addAction(cancelAction)
                     self.present(self.tipAlertViewController!, animated: true, completion: nil)
@@ -414,7 +421,7 @@ extension DLSolverViewController{
 
         
         if isSolving {
-            tipAlertViewController = UIAlertController(title: "Solving~", message: "solvingMessage".localized(withComment: ""), preferredStyle: .alert)
+            tipAlertViewController = UIAlertController(title: "Solving~", message: "solvingMessage".localizedString(), preferredStyle: .alert)
             let cancelAction = UIAlertAction(title: "Okay~", style: .cancel, handler: nil)
             tipAlertViewController?.addAction(cancelAction)
             self.present(tipAlertViewController!, animated: true, completion: nil)
@@ -432,17 +439,17 @@ extension DLSolverViewController{
                     self.tipAlertViewController?.dismiss(animated: true, completion: nil)
                 }
                 
-                self.tipAlertViewController = UIAlertController(title: "Opps~", message: "errorMap".localized(withComment: ""), preferredStyle: .alert)
+                self.tipAlertViewController = UIAlertController(title: "Opps~", message: "errorMap".localizedString(), preferredStyle: .alert)
                 let cancelAction = UIAlertAction(title: "Okay~", style: .cancel, handler: nil)
                 self.tipAlertViewController?.addAction(cancelAction)
                 if DLSudokuSolver.sharedSudokuSolver.isUnavailableMap{
                 }else{
                     if DLSudokuSolver.sharedSudokuSolver.resultMap.count == 1{
                         self.tipAlertViewController?.title = "Tips:"
-                        self.tipAlertViewController?.message = "normalMap".localized(withComment: "")
+                        self.tipAlertViewController?.message = "normalMap".localizedString()
                     }else{
                         self.tipAlertViewController?.title = "Tips:"
-                        self.tipAlertViewController?.message = "multi_results".localized(withComment: "")
+                        self.tipAlertViewController?.message = "multi_results".localizedString()
                     }
                 }
                 self.isSolving = false

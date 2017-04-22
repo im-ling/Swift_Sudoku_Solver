@@ -24,6 +24,7 @@
 		94A147C51EAA266C00028EE5 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 94A147C71EAA266C00028EE5 /* Localizable.strings */; };
 		94A147CA1EAA273800028EE5 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A147C91EAA273800028EE5 /* String+Extension.swift */; };
 		94A147CC1EAA2A7000028EE5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 94A147C11EAA262700028EE5 /* InfoPlist.strings */; };
+		94E008BE1EAA45E400F08241 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E008BD1EAA45E400F08241 /* UIColor+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +52,7 @@
 		94A147C61EAA266C00028EE5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		94A147C81EAA266D00028EE5 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		94A147C91EAA273800028EE5 /* String+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		94E008BD1EAA45E400F08241 /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		FCEF8C71F4BE928342350A7D /* Pods-Swift_Sudoku_Solver.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swift_Sudoku_Solver.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Swift_Sudoku_Solver/Pods-Swift_Sudoku_Solver.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -128,6 +130,7 @@
 				94A147C91EAA273800028EE5 /* String+Extension.swift */,
 				942302D41E9A687300F312B3 /* UIView+Extension.swift */,
 				942AE67D1EA0F76D00009CF2 /* UIButton+Extension.swift */,
+				94E008BD1EAA45E400F08241 /* UIColor+Extension.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -309,6 +312,7 @@
 				942302C21E9A63D000F312B3 /* ViewController.swift in Sources */,
 				94A147CA1EAA273800028EE5 /* String+Extension.swift in Sources */,
 				942302E41E9A689B00F312B3 /* DLSolverViewController.swift in Sources */,
+				94E008BE1EAA45E400F08241 /* UIColor+Extension.swift in Sources */,
 				942302E01E9A687300F312B3 /* DLSudokuSolver.swift in Sources */,
 				942AE67E1EA0F76D00009CF2 /* UIButton+Extension.swift in Sources */,
 				942302DF1E9A687300F312B3 /* DLElementNumber.swift in Sources */,
