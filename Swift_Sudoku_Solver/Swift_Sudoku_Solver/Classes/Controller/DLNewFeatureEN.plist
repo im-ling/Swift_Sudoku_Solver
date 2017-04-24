@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>imageName</key>
+		<string>newFeature1</string>
+		<key>textContext</key>
+		<string>1.Pick up a number:</string>
+	</dict>
+	<dict>
+		<key>imageName</key>
+		<string>newFeature2</string>
+		<key>textContext</key>
+		<string>2.Fill a blank:</string>
+	</dict>
+	<dict>
+		<key>imageName</key>
+		<string>newFeature3</string>
+		<key>textContext</key>
+		<string>3.Click solve（5~15seconds）:</string>
+	</dict>
+	<dict>
+		<key>imageName</key>
+		<string>newFeature4</string>
+		<key>textContext</key>
+		<string>4.See more:</string>
+	</dict>
+</array>
+</plist>

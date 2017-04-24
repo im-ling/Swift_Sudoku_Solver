@@ -24,7 +24,9 @@ class DLFunctionButton: UIButton {
         setTitleColor(UIColor.white, for: .normal)
         addTarget(target, action:action, for: .touchUpInside)
         
-        backgroundColor = UIColor.colorWithHex(hex: 0x007aff)
+//        backgroundColor = UIColor.colorWithHex(hex: 0x007aff)
+//        backgroundColor = UIColor.colorWithHex(hex: 0x4860f6)
+        backgroundColor = UIColor.colorWithHex(hex: functionButtonColorHexValue)
         setBackgroundImage(UIImage(), for: .normal)
 
     }

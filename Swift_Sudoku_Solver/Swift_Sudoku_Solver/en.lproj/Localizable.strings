@@ -12,6 +12,7 @@
 "earser" = "Eraser";
 "check" = "Check";
 "clean" = "Clean";
+"skip" = "Skip";
 
 "normalMap" = "This is normal puzzle.";
 "errorMap" = "The map can't be solve,please try another one~";

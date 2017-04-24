@@ -20,11 +20,7 @@ extension UIColor{
         return UIColor(red: CGFloat(red) / 255.0, green: CGFloat(green) / 255.0, blue: CGFloat(blue) / 255.0, alpha: 1);
     }
     
-//    convenience init(rgb: Int) {
-//        self.init(
-//            red: (rgb >> 16) & 0xFF,
-//            green: (rgb >> 8) & 0xFF,
-//            blue: rgb & 0xFF
-//        )
-//    }
+    class func randomColor() -> UIColor{
+        return UIColor(red: CGFloat(arc4random_uniform(255))/255.0, green: CGFloat(arc4random_uniform(255))/255.0, blue: CGFloat(arc4random_uniform(255))/255.0, alpha: 1)
+    }
 }

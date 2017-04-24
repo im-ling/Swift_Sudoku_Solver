@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>imageName</key>
+		<string>newFeature1</string>
+		<key>textContext</key>
+		<string>1.选中一个数字:</string>
+	</dict>
+	<dict>
+		<key>imageName</key>
+		<string>newFeature2</string>
+		<key>textContext</key>
+		<string>2.填补空白位置:</string>
+	</dict>
+	<dict>
+		<key>imageName</key>
+		<string>newFeature3</string>
+		<key>textContext</key>
+		<string>3.点击解答（5至15秒）:</string>
+	</dict>
+	<dict>
+		<key>imageName</key>
+		<string>newFeature4</string>
+		<key>textContext</key>
+		<string>4.更多请见:</string>
+	</dict>
+</array>
+</plist>

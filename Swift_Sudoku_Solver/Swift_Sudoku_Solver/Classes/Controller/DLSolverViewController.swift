@@ -12,7 +12,7 @@ import SnapKit
 class DLSolverViewController: UIViewController {
     //MARK: LAZY LOAD
     
-    
+    fileprivate var featureVC = DLNewFeatureViewController()
     /// 弹出栏
     fileprivate var tipAlertViewController:UIAlertController?
     
@@ -143,7 +143,8 @@ class DLSolverViewController: UIViewController {
         let buttton = DLNumberButton()
         buttton.layer.cornerRadius = 8.0
         buttton.layer.masksToBounds = true
-        buttton.backgroundColor = UIColor.colorWithHex(hex: 0x007aff)
+//        buttton.backgroundColor = UIColor.colorWithHex(hex: 0x007aff)
+        buttton.backgroundColor = UIColor.colorWithHex(hex: functionButtonColorHexValue)
         buttton.setBackgroundImage(UIImage(), for: .normal)
 //        buttton.setBackgroundImage(UIImage(named:"iphonetall-background-wood-x10"), for: .normal)
         buttton.setTitle("earser".localizedString(), for: .normal)
@@ -215,6 +216,8 @@ class DLSolverViewController: UIViewController {
         setupNav()
         view.backgroundColor = UIColor(patternImage: UIImage(named: "iphonetall-background-x13")!)
         
+        let helpButton = UIButton.init(type: .infoLight)
+        navigationItem.rightBarButtonItem = UIBarButtonItem(customView: helpButton)
         
         //setupMiddleView
         view.addSubview(cageView)
@@ -298,6 +301,14 @@ class DLSolverViewController: UIViewController {
         
         numberMapToButtonMap(numberMap: puzzleMap,buttonMap: buttonMap)
         
+        let time: TimeInterval = 1.0
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + time) {
+//            let nav = UINavigationController(rootViewController: self.featureVC)
+//            self.present(nav, animated: true, completion: nil)
+            self.present(self.featureVC, animated: true, completion: nil)
+        }
+
+        
     }
     
     
@@ -325,12 +336,7 @@ class DLSolverViewController: UIViewController {
         //        self.navigationController?.navigationBar.isHidden = true
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .top, barMetrics: .default)
         navigationController?.navigationBar.shadowImage = UIImage()
-        let label = UILabel()
-        label.font = UIFont.systemFont(ofSize: 20)
-        label.text = "title".localizedString()
-        label.sizeToFit()
-        label.textColor = UIColor.white
-        navigationItem.titleView = label
+        navigationItem.titleView = UILabel.titleLabel()
     }
     
     

@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0B8DC4BFCB668ECA31097E1F /* Pods_Swift_Sudoku_Solver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 013B3642BE90200F2D62FB8F /* Pods_Swift_Sudoku_Solver.framework */; };
+		0B8DC4BFCB668ECA31097E1F /* Pods_Swift_Sudoku_Solver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 013B3642BE90200F2D62FB8F /* Pods_Swift_Sudoku_Solver.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		942302C01E9A63D000F312B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942302BF1E9A63D000F312B3 /* AppDelegate.swift */; };
 		942302C21E9A63D000F312B3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942302C11E9A63D000F312B3 /* ViewController.swift */; };
 		942302C51E9A63D000F312B3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 942302C31E9A63D000F312B3 /* Main.storyboard */; };
@@ -21,6 +21,16 @@
 		942302E41E9A689B00F312B3 /* DLSolverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942302E31E9A689B00F312B3 /* DLSolverViewController.swift */; };
 		942AE67E1EA0F76D00009CF2 /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942AE67D1EA0F76D00009CF2 /* UIButton+Extension.swift */; };
 		942AE6801EA0FADE00009CF2 /* DLFunctionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942AE67F1EA0FADE00009CF2 /* DLFunctionButton.swift */; };
+		942FC2AA1EACCDDE0091BFF7 /* DLNewFeatureCN.plist in Resources */ = {isa = PBXBuildFile; fileRef = 942FC2A91EACCDDE0091BFF7 /* DLNewFeatureCN.plist */; };
+		942FC2AC1EACCE4D0091BFF7 /* DLNewFeatureEN.plist in Resources */ = {isa = PBXBuildFile; fileRef = 942FC2AB1EACCE4D0091BFF7 /* DLNewFeatureEN.plist */; };
+		942FC2AE1EACD8420091BFF7 /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942FC2AD1EACD8420091BFF7 /* UILabel+Extension.swift */; };
+		942FC2B01EACDE580091BFF7 /* DLHelpList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 942FC2AF1EACDE580091BFF7 /* DLHelpList.plist */; };
+		9437DF0A1EAB853E0002C4C3 /* DLHelpModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9437DF091EAB853E0002C4C3 /* DLHelpModel.swift */; };
+		9437DF111EAB8C490002C4C3 /* DLShowInfoFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9437DF101EAB8C490002C4C3 /* DLShowInfoFlowLayout.swift */; };
+		9437DF131EAB8C730002C4C3 /* DLShowInfoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9437DF121EAB8C730002C4C3 /* DLShowInfoCollectionViewCell.swift */; };
+		9437DF151EAB8D1B0002C4C3 /* DLShowInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9437DF141EAB8D1B0002C4C3 /* DLShowInfoModel.swift */; };
+		9437DF171EAB94450002C4C3 /* DLShowInfoCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9437DF161EAB94450002C4C3 /* DLShowInfoCollectionView.swift */; };
+		9439C7B21EAC2FD00067186A /* DLNewFeatureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9439C7B11EAC2FD00067186A /* DLNewFeatureViewController.swift */; };
 		94A147C51EAA266C00028EE5 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 94A147C71EAA266C00028EE5 /* Localizable.strings */; };
 		94A147CA1EAA273800028EE5 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A147C91EAA273800028EE5 /* String+Extension.swift */; };
 		94A147CC1EAA2A7000028EE5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 94A147C11EAA262700028EE5 /* InfoPlist.strings */; };
@@ -44,6 +54,17 @@
 		942302E31E9A689B00F312B3 /* DLSolverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DLSolverViewController.swift; sourceTree = "<group>"; };
 		942AE67D1EA0F76D00009CF2 /* UIButton+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
 		942AE67F1EA0FADE00009CF2 /* DLFunctionButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DLFunctionButton.swift; sourceTree = "<group>"; };
+		942C03C41EAB52CF0047D7B2 /* comgithublilingSudokuSolverProvisioningProfiles.mobileprovision */ = {isa = PBXFileReference; lastKnownFileType = file; path = comgithublilingSudokuSolverProvisioningProfiles.mobileprovision; sourceTree = "<group>"; };
+		942FC2A91EACCDDE0091BFF7 /* DLNewFeatureCN.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DLNewFeatureCN.plist; sourceTree = "<group>"; };
+		942FC2AB1EACCE4D0091BFF7 /* DLNewFeatureEN.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DLNewFeatureEN.plist; sourceTree = "<group>"; };
+		942FC2AD1EACD8420091BFF7 /* UILabel+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+Extension.swift"; sourceTree = "<group>"; };
+		942FC2AF1EACDE580091BFF7 /* DLHelpList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DLHelpList.plist; sourceTree = "<group>"; };
+		9437DF091EAB853E0002C4C3 /* DLHelpModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DLHelpModel.swift; sourceTree = "<group>"; };
+		9437DF101EAB8C490002C4C3 /* DLShowInfoFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DLShowInfoFlowLayout.swift; sourceTree = "<group>"; };
+		9437DF121EAB8C730002C4C3 /* DLShowInfoCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DLShowInfoCollectionViewCell.swift; sourceTree = "<group>"; };
+		9437DF141EAB8D1B0002C4C3 /* DLShowInfoModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DLShowInfoModel.swift; sourceTree = "<group>"; };
+		9437DF161EAB94450002C4C3 /* DLShowInfoCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DLShowInfoCollectionView.swift; sourceTree = "<group>"; };
+		9439C7B11EAC2FD00067186A /* DLNewFeatureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DLNewFeatureViewController.swift; sourceTree = "<group>"; };
 		94A0C2401EA5FAA60010BF85 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		94A0C2411EA5FAA60010BF85 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		94A0C2441EA5FB8E0010BF85 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "zh-Hans"; path = "zh-Hans.lproj/Info.plist"; sourceTree = "<group>"; };
@@ -80,6 +101,7 @@
 		942302B31E9A63D000F312B3 = {
 			isa = PBXGroup;
 			children = (
+				942C03C41EAB52CF0047D7B2 /* comgithublilingSudokuSolverProvisioningProfiles.mobileprovision */,
 				942302BE1E9A63D000F312B3 /* Swift_Sudoku_Solver */,
 				942302BD1E9A63D000F312B3 /* Products */,
 				3EA0DA7D52AA62DC78458C93 /* Pods */,
@@ -114,6 +136,7 @@
 		942302D11E9A687300F312B3 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				9437DF0D1EAB8C220002C4C3 /* ShowInfo */,
 				942302D21E9A687300F312B3 /* Common */,
 				942302D51E9A687300F312B3 /* Controller */,
 				942302D61E9A687300F312B3 /* Model */,
@@ -131,6 +154,7 @@
 				942302D41E9A687300F312B3 /* UIView+Extension.swift */,
 				942AE67D1EA0F76D00009CF2 /* UIButton+Extension.swift */,
 				94E008BD1EAA45E400F08241 /* UIColor+Extension.swift */,
+				942FC2AD1EACD8420091BFF7 /* UILabel+Extension.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -139,6 +163,10 @@
 			isa = PBXGroup;
 			children = (
 				942302E31E9A689B00F312B3 /* DLSolverViewController.swift */,
+				9439C7B11EAC2FD00067186A /* DLNewFeatureViewController.swift */,
+				942FC2A91EACCDDE0091BFF7 /* DLNewFeatureCN.plist */,
+				942FC2AB1EACCE4D0091BFF7 /* DLNewFeatureEN.plist */,
+				942FC2AF1EACDE580091BFF7 /* DLHelpList.plist */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -146,6 +174,7 @@
 		942302D61E9A687300F312B3 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				9437DF091EAB853E0002C4C3 /* DLHelpModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -166,6 +195,17 @@
 				942AE67F1EA0FADE00009CF2 /* DLFunctionButton.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		9437DF0D1EAB8C220002C4C3 /* ShowInfo */ = {
+			isa = PBXGroup;
+			children = (
+				9437DF101EAB8C490002C4C3 /* DLShowInfoFlowLayout.swift */,
+				9437DF121EAB8C730002C4C3 /* DLShowInfoCollectionViewCell.swift */,
+				9437DF141EAB8D1B0002C4C3 /* DLShowInfoModel.swift */,
+				9437DF161EAB94450002C4C3 /* DLShowInfoCollectionView.swift */,
+			);
+			path = ShowInfo;
 			sourceTree = "<group>";
 		};
 		D7A4D951B0FC025F77AE2DFF /* Frameworks */ = {
@@ -247,8 +287,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				94A147CC1EAA2A7000028EE5 /* InfoPlist.strings in Resources */,
+				942FC2AC1EACCE4D0091BFF7 /* DLNewFeatureEN.plist in Resources */,
 				94A147C51EAA266C00028EE5 /* Localizable.strings in Resources */,
 				942302CA1E9A63D000F312B3 /* LaunchScreen.storyboard in Resources */,
+				942FC2AA1EACCDDE0091BFF7 /* DLNewFeatureCN.plist in Resources */,
+				942FC2B01EACDE580091BFF7 /* DLHelpList.plist in Resources */,
 				942302C71E9A63D000F312B3 /* Assets.xcassets in Resources */,
 				942302C51E9A63D000F312B3 /* Main.storyboard in Resources */,
 			);
@@ -311,16 +354,23 @@
 			files = (
 				942302C21E9A63D000F312B3 /* ViewController.swift in Sources */,
 				94A147CA1EAA273800028EE5 /* String+Extension.swift in Sources */,
+				9437DF111EAB8C490002C4C3 /* DLShowInfoFlowLayout.swift in Sources */,
 				942302E41E9A689B00F312B3 /* DLSolverViewController.swift in Sources */,
+				9437DF151EAB8D1B0002C4C3 /* DLShowInfoModel.swift in Sources */,
 				94E008BE1EAA45E400F08241 /* UIColor+Extension.swift in Sources */,
+				9439C7B21EAC2FD00067186A /* DLNewFeatureViewController.swift in Sources */,
+				9437DF0A1EAB853E0002C4C3 /* DLHelpModel.swift in Sources */,
 				942302E01E9A687300F312B3 /* DLSudokuSolver.swift in Sources */,
 				942AE67E1EA0F76D00009CF2 /* UIButton+Extension.swift in Sources */,
 				942302DF1E9A687300F312B3 /* DLElementNumber.swift in Sources */,
+				942FC2AE1EACD8420091BFF7 /* UILabel+Extension.swift in Sources */,
+				9437DF171EAB94450002C4C3 /* DLShowInfoCollectionView.swift in Sources */,
 				942302E21E9A687300F312B3 /* DLNumberButton.swift in Sources */,
 				942302C01E9A63D000F312B3 /* AppDelegate.swift in Sources */,
 				942302DE1E9A687300F312B3 /* UIView+Extension.swift in Sources */,
 				942302DD1E9A687300F312B3 /* DLCommon.swift in Sources */,
 				942AE6801EA0FADE00009CF2 /* DLFunctionButton.swift in Sources */,
+				9437DF131EAB8C730002C4C3 /* DLShowInfoCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -376,6 +426,7 @@
 /* Begin XCBuildConfiguration section */
 		942302CC1E9A63D000F312B3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FCEF8C71F4BE928342350A7D /* Pods-Swift_Sudoku_Solver.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
@@ -427,6 +478,7 @@
 		};
 		942302CD1E9A63D000F312B3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 49ADCBFDED3755F298CD58A0 /* Pods-Swift_Sudoku_Solver.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
@@ -474,7 +526,7 @@
 			baseConfigurationReference = FCEF8C71F4BE928342350A7D /* Pods-Swift_Sudoku_Solver.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Ling Li (926S2V6P73)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = X66X3BGMSJ;
 				INFOPLIST_FILE = "Swift_Sudoku_Solver/zh-Hans.lproj/Info.plist";
@@ -482,8 +534,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.github.liling.SudokuSolver;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "01b7656e-0bec-498f-82e8-95992b16f905";
-				PROVISIONING_PROFILE_SPECIFIER = sudokuProvisioningProfiles;
+				PROVISIONING_PROFILE = "1d3a90a4-0e10-4eb0-a938-da42264c63a8";
+				PROVISIONING_PROFILE_SPECIFIER = com.github.liling.SudokuSolverProvisioningProfiles;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -493,6 +545,7 @@
 			baseConfigurationReference = 49ADCBFDED3755F298CD58A0 /* Pods-Swift_Sudoku_Solver.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = X66X3BGMSJ;
 				INFOPLIST_FILE = "Swift_Sudoku_Solver/zh-Hans.lproj/Info.plist";
@@ -500,8 +553,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.github.liling.SudokuSolver;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "01b7656e-0bec-498f-82e8-95992b16f905";
-				PROVISIONING_PROFILE_SPECIFIER = sudokuProvisioningProfiles;
+				PROVISIONING_PROFILE = "1d3a90a4-0e10-4eb0-a938-da42264c63a8";
+				PROVISIONING_PROFILE_SPECIFIER = com.github.liling.SudokuSolverProvisioningProfiles;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
