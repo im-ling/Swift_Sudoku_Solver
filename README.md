@@ -10,6 +10,6 @@ Developor: DoubleL
 
 UI:        allivare
 
-App 已上架，麻烦大家支持下，谢谢~
+App 已上架(App Store 搜索 '数独解')，麻烦大家支持下，谢谢~
 
-App Store 搜索数独解
+
