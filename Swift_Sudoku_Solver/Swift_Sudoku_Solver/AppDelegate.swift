@@ -8,14 +8,17 @@
 
 import UIKit
 
+let versionKey = "varsion"
+let version = "1.0"
+
 @UIApplicationMain
+
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        
+                
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.backgroundColor = UIColor.groupTableViewBackground
         let vc = DLSolverViewController()
@@ -23,8 +26,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.rootViewController = nav
         window?.makeKeyAndVisible()
         
+        setNav(nav: nav)
+//        UIApplication.shared.statusBarStyle = .default
+        UIApplication.shared.statusBarStyle = .lightContent
+        print(self)
+        print(UIApplication.shared)
         // Override point for customization after application launch.
         return true
+    }
+    
+    fileprivate func setNav(nav:UINavigationController){
+        nav.navigationBar.setBackgroundImage(UIImage(), for: .top, barMetrics: .default)
+        nav.navigationBar.shadowImage = UIImage()
+
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

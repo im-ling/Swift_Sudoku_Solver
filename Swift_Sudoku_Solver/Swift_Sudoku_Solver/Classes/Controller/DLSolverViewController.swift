@@ -210,13 +210,20 @@ class DLSolverViewController: UIViewController {
     
     
     
+    @objc fileprivate func helpAction(){
+        navigationController?.pushViewController(DLUnfoldTableViewController(), animated: true)
+    }
     
     //MARK: UI搭建
     fileprivate func setupUI(){
+        
+        
+        
         setupNav()
         view.backgroundColor = UIColor(patternImage: UIImage(named: "iphonetall-background-x13")!)
         
         let helpButton = UIButton.init(type: .infoLight)
+        helpButton.addTarget(self, action: #selector(helpAction), for: .touchUpInside)
         navigationItem.rightBarButtonItem = UIBarButtonItem(customView: helpButton)
         
         //setupMiddleView
@@ -301,14 +308,16 @@ class DLSolverViewController: UIViewController {
         
         numberMapToButtonMap(numberMap: puzzleMap,buttonMap: buttonMap)
         
-        let time: TimeInterval = 1.0
-        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + time) {
-//            let nav = UINavigationController(rootViewController: self.featureVC)
-//            self.present(nav, animated: true, completion: nil)
-            self.present(self.featureVC, animated: true, completion: nil)
+        if let defalutsVersion = UserDefaults.standard.object(forKey: versionKey), String(describing: defalutsVersion) == version{
+        }else{
+            let time: TimeInterval = 1.0
+            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + time) {
+                //            let nav = UINavigationController(rootViewController: self.featureVC)
+                //            self.present(nav, animated: true, completion: nil)
+                self.present(self.featureVC, animated: true, completion: nil)
+            }
+            UserDefaults.standard.setValue(version, forKey: versionKey)
         }
-
-        
     }
     
     
@@ -331,11 +340,8 @@ class DLSolverViewController: UIViewController {
         }
     }
     
-    
     fileprivate func setupNav(){
         //        self.navigationController?.navigationBar.isHidden = true
-        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .top, barMetrics: .default)
-        navigationController?.navigationBar.shadowImage = UIImage()
         navigationItem.titleView = UILabel.titleLabel()
     }
     
@@ -343,9 +349,7 @@ class DLSolverViewController: UIViewController {
 }
 
 
-extension DLSolverViewController{
-    
-}
+
 
 
 //数据相关

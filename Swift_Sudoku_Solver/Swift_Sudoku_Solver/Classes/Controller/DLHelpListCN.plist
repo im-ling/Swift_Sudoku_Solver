@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>name</key>
+		<string>1. 填数字</string>
+		<key>detail</key>
+		<string></string>
+		<key>steps</key>
+		<array>
+			<string>1.0 如何填一个数字</string>
+			<string>1.1 选中一个数字</string>
+			<string>1.2 点击一个空白格</string>
+		</array>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>2. 橡皮</string>
+		<key>steps</key>
+		<array>
+			<string>2.0 擦除数据(使用方法同数字)</string>
+			<string>2.1 选中橡皮</string>
+			<string>2.2 点击想要去除的数</string>
+		</array>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>3. 解答</string>
+		<key>detail</key>
+		<string>解答数独，需要花5-25秒时间不等</string>
+		<key>steps</key>
+		<array>
+			<string>3.0 解答数独（需要花5-25秒时间不等）</string>
+			<string>3.1 数独有解返回解</string>
+			<string>3.2 数独无解，提醒无解</string>
+		</array>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>4. 检查</string>
+		<key>steps</key>
+		<array>
+			<string>4.0 检查数独是否有解(需要花费5-25秒不等)</string>
+			<string>4.1 数独单解，提醒为正常数独</string>
+			<string>4.2 数独多解，告诉为多解数独</string>
+			<string>4.3 数独无解，返回无解</string>
+		</array>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>5. 清空</string>
+		<key>steps</key>
+		<array>
+			<string>5.0 清除所有数据</string>
+		</array>
+	</dict>
+</array>
+</plist>

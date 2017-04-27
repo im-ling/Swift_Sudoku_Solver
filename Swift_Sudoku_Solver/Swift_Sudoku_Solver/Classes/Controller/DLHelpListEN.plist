@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <array>
+        <dict>
+            <key>name</key>
+            <string>1. Fill a nubmer</string>
+            <key>detail</key>
+            <string></string>
+            <key>steps</key>
+            <array>
+                <string>1.0 How to fill a number</string>
+                <string>1.1 Pick up a number(click a number  in bottom buttons)</string>
+                <string>1.2 Click a blank</string>
+            </array>
+        </dict>
+        <dict>
+            <key>name</key>
+            <string>2. Eraser</string>
+            <key>steps</key>
+            <array>
+                <string>2.0 Delete a number</string>
+                <string>2.1 Select "Eraser" button</string>
+                <string>2.2 Click the number you want to delete</string>
+            </array>
+        </dict>
+        <dict>
+            <key>name</key>
+            <string>3. Solve</string>
+            <key>detail</key>
+            <string>Solve puzzle，it will take 5-25 seconds</string>
+            <key>steps</key>
+            <array>
+                <string>3.0 Solve puzzle，it will take 5-25 seconds</string>
+                <string>3.1 It will return an answer if it is solvable puzzle</string>
+                <string>3.2 It will retun "impossible message" if it is unsolvable puzzle</string>
+            </array>
+        </dict>
+        <dict>
+            <key>name</key>
+            <string>4. Check</string>
+            <key>steps</key>
+            <array>
+                <string>4.0 Check out the puzzle type </string>
+                <string>4.1 It will return "normal puzzle" if there is only one answer"</string>
+                <string>4.2 It will return "multi-results" if there are more than one answers</string>
+                <string>4.3 It will retun "impossible message" if it is unsolvable puzzle</string>
+            </array>
+        </dict>
+        <dict>
+            <key>name</key>
+            <string>5. Clean</string>
+            <key>steps</key>
+            <array>
+            <string>5.0 Delete all number in puzzle</string>
+            </array>
+        </dict>
+    </array>
+</plist>

@@ -5,7 +5,7 @@
   Created by NowOrNever on 21/04/2017.
   Copyright © 2017 Focus. All rights reserved.
 */
-"title" = "数 独 助 手";
+"title" = "数 独 解";
 
 "solve" = "解答";
 "earser" = "橡皮";
@@ -16,5 +16,5 @@
 
 "normalMap" = "这是个常规(单解)数独.";
 "errorMap" = "很抱歉的通知您，这个是个无解数独。";
-"solvingMessage" = "小助手正在努力解答中，请稍等片刻~";
+"solvingMessage" = "我们正在努力解答中，请稍等片刻~";
 "multi_results" = "这个是一个多解数独哦。";
