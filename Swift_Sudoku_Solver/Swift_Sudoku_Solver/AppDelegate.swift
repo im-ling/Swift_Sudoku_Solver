@@ -38,7 +38,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     fileprivate func setNav(nav:UINavigationController){
         nav.navigationBar.setBackgroundImage(UIImage(), for: .top, barMetrics: .default)
         nav.navigationBar.shadowImage = UIImage()
-
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

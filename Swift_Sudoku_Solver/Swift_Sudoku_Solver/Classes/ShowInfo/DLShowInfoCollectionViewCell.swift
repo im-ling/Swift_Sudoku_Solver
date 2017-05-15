@@ -69,5 +69,6 @@ class DLShowInfoCollectionViewCell: UICollectionViewCell {
             make.left.equalTo(modelImageView)
         }
     }
+    
 
 }

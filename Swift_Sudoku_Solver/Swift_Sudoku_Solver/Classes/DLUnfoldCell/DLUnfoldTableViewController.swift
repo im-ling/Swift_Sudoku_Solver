@@ -13,7 +13,6 @@ private let headViewID = "headViewID"
 
 class DLUnfoldTableViewController: UIViewController {
     
-    
     fileprivate lazy var tableView:UITableView = { 
         let tableView = UITableView(frame: UIScreen.main.bounds, style: .grouped)
         tableView.frame = CGRect(x: 0, y: 64, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height - 64)
@@ -43,8 +42,6 @@ class DLUnfoldTableViewController: UIViewController {
         view = UIView(frame: UIScreen.main.bounds)
         let backImageView = UIImageView(image: UIImage(named: "iphonetall-background-x13"))
         view.addSubview(backImageView)
-
-        
 
         view.addSubview(tableView)
     }
@@ -87,9 +84,12 @@ extension DLUnfoldTableViewController: UITableViewDelegate{
         return headView
     }
     
-    
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 40.0
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: false)
     }
     
 }
