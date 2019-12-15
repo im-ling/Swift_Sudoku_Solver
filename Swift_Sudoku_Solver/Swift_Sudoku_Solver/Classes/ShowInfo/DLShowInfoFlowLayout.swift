@@ -14,6 +14,6 @@ class DLShowInfoFlowLayout: UICollectionViewFlowLayout {
         itemSize = (collectionView?.size)!
         minimumLineSpacing = 0
         minimumInteritemSpacing = 0
-        scrollDirection = UICollectionViewScrollDirection.horizontal
+        scrollDirection = UICollectionView.ScrollDirection.horizontal
     }
 }

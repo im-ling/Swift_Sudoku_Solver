@@ -12,7 +12,7 @@ class DLUnfoldGroupModel: NSObject {
     var name:String = ""
     var steps:[String]?
     var isSelected:Bool = false
-    
+        
     override func setValue(_ value: Any?, forUndefinedKey key: String) {
         
     }

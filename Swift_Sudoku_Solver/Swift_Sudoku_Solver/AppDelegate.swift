@@ -8,8 +8,8 @@
 
 import UIKit
 
-let versionKey = "varsion"
-let version = "1.0"
+let sudokuVersionKey = "varsion"
+let sudokuVersion = "1.0"
 
 @UIApplicationMain
 
@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
                 
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.backgroundColor = UIColor.groupTableViewBackground

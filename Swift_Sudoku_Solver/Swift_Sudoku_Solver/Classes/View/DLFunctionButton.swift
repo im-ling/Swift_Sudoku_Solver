@@ -9,7 +9,7 @@
 import UIKit
 
 class DLFunctionButton: UIButton {
-    init(title:String,target:Any?,action:Selector) {
+    init(target:Any?,action:Selector,title:String) {
         self.init()
         backgroundColor = UIColor.white
 //        backgroundColor = UIColor.colorWithHex(hex: 0x003466)
@@ -38,16 +38,4 @@ class DLFunctionButton: UIButton {
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
-    
-//    convenience init(title:String,target:Any?,action:Selector){
-//        self.init()
-//        setBackgroundImage(UIImage(named:"iphonetall-background-wood-x10"), for: .normal)
-//        layer.cornerRadius = 8.0
-//        layer.masksToBounds = true
-//        setTitle(title, for: .normal)
-//        addTarget(target, action:action, for: .touchUpInside)
-//    }
-
-
 }

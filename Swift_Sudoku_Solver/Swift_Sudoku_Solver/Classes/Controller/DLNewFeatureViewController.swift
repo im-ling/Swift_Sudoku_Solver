@@ -69,7 +69,7 @@ class DLNewFeatureViewController: UIViewController {
         
     }
     
-    func dismissClick(){
+    @objc func dismissClick(){
         self.dismiss(animated: true, completion: nil)
     }
 //    

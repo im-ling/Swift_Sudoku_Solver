@@ -27,11 +27,14 @@ class DLUnfoldTableViewController: UIViewController {
         if Locale.current.languageCode == "zh"{
             fileName = "DLHelpListCN.plist"
         }
+        
+        
         if let filePath = Bundle.main.path(forResource: fileName, ofType: nil){
             let tempArray = NSArray(contentsOfFile: filePath) as! [Dictionary<String, Any>]
             for dict in tempArray{
                 let model = DLUnfoldGroupModel()
-                model.setValuesForKeys(dict)
+                model.name = dict["name"] as! String
+                model.steps = dict["steps"] as? [String]
                 models.append(model)
             }
         }

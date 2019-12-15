@@ -132,7 +132,7 @@ class DLSolverViewController: UIViewController {
     
     /// solveButton
     fileprivate lazy var solveButton:DLFunctionButton = {
-        let button = DLFunctionButton(title: "solve".localizedString(), target: self, action: #selector(solvePuzzle))
+        let button = DLFunctionButton.init(target: self, action: #selector(solvePuzzle),title: "solve".localizedString())
         //custom code
         return button
     }()
@@ -154,7 +154,7 @@ class DLSolverViewController: UIViewController {
     
     /// 清除所有
     fileprivate lazy var cleanButton:DLFunctionButton = {
-        let button = DLFunctionButton(title: "clean".localizedString(), target: self, action: #selector(cleanButtonClick))
+        let button = DLFunctionButton(target: self, action: #selector(cleanButtonClick),title: "clean".localizedString())
         return button
     }()
     
@@ -180,13 +180,13 @@ class DLSolverViewController: UIViewController {
     
     /// 检查button
     fileprivate lazy var checkButton:DLFunctionButton = {
-        let button = DLFunctionButton(title: "check".localizedString(), target: self, action: #selector(checkPuzzle))
+        let button = DLFunctionButton(target: self, action: #selector(checkPuzzle),title: "check".localizedString())
         return button
 
     }()
     
     fileprivate lazy var nextButton:DLFunctionButton = {
-        let button = DLFunctionButton(title: "Next", target: self, action: #selector(nextButtonClick(button:)))
+        let button = DLFunctionButton(target: self, action: #selector(nextButtonClick(button:)),title: "Next")
         return button
     }()
 
@@ -195,7 +195,7 @@ class DLSolverViewController: UIViewController {
     }
     
     fileprivate lazy var prevButton:DLFunctionButton = {
-        let button = DLFunctionButton(title: "Prev", target: self, action: #selector(prevButtonClick(button:)))
+        let button = DLFunctionButton(target: self, action: #selector(prevButtonClick(button:)),title: "Prev")
         return button
     }()
     
@@ -308,7 +308,7 @@ class DLSolverViewController: UIViewController {
         
         numberMapToButtonMap(numberMap: puzzleMap,buttonMap: buttonMap)
         
-        if let defalutsVersion = UserDefaults.standard.object(forKey: versionKey), String(describing: defalutsVersion) == version{
+        if let defalutsVersion = UserDefaults.standard.object(forKey: sudokuVersionKey), String(describing: defalutsVersion) == sudokuVersion{
         }else{
             let time: TimeInterval = 1.0
             DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + time) {
@@ -316,7 +316,7 @@ class DLSolverViewController: UIViewController {
                 //            self.present(nav, animated: true, completion: nil)
                 self.present(self.featureVC, animated: true, completion: nil)
             }
-            UserDefaults.standard.setValue(version, forKey: versionKey)
+            UserDefaults.standard.setValue(sudokuVersion, forKey: sudokuVersionKey)
         }
     }
     
