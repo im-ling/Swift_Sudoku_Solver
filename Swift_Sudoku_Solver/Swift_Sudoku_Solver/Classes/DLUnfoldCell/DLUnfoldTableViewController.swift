@@ -21,24 +21,26 @@ class DLUnfoldTableViewController: UIViewController {
         return tableView
     }()
 
-    fileprivate lazy var groupModels:[DLUnfoldGroupModel] = {
+    fileprivate lazy var groupModels: [DLUnfoldGroupModel] = {
         var models = [DLUnfoldGroupModel]()
         var fileName = "DLHelpListEN.plist"
         if Locale.current.languageCode == "zh"{
             fileName = "DLHelpListCN.plist"
         }
         
+        let plistPath = Bundle.main.path(forResource: fileName, ofType: nil)!
         
-        if let filePath = Bundle.main.path(forResource: fileName, ofType: nil){
-            let tempArray = NSArray(contentsOfFile: filePath) as! [Dictionary<String, Any>]
-            for dict in tempArray{
-                let model = DLUnfoldGroupModel()
-                model.name = dict["name"] as! String
-                model.steps = dict["steps"] as? [String]
-                models.append(model)
-            }
+//        let plistURL = URL(string: plistPath)!
+        let plistURL = URL(fileURLWithPath: plistPath)
+//        let plistURL = URL(fileReferenceLiteralResourceName: fileName)
+        
+        let data = try! Data(contentsOf:plistURL)
+        
+        if let struct_models: [DLUnfoldGroupModel] = try! PropertyListDecoder().decode([DLUnfoldGroupModel].self, from: data) {
+            models = struct_models
         }
-        return models
+        
+        return models;
     }()
     
     override func loadView() {

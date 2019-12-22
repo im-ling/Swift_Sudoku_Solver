@@ -8,13 +8,27 @@
 
 import UIKit
 
-class DLUnfoldGroupModel: NSObject {
-    var name:String = ""
-    var steps:[String]?
-    var isSelected:Bool = false
-        
-    override func setValue(_ value: Any?, forUndefinedKey key: String) {
-        
-    }
+class DLUnfoldGroupModel: NSObject,Decodable {
+    let name : String
+    let details: String?
+    let steps : [String]?
+
+    var isSelected : Bool = false
     
+    required init(from decoder: Decoder) throws {
+        let values = try decoder.container(keyedBy: CodingKeys.self)
+        name = try values.decode(String.self, forKey: .name)
+        details = try? values.decode(String.self, forKey: .details)
+        steps = try values.decode([String].self, forKey: .steps)
+    }
+
+    enum CodingKeys: String, CodingKey {
+        case name
+        case details
+        case steps
+    }
+
+    override func setValue(_ value: Any?, forUndefinedKey key: String) {
+
+    }
 }
