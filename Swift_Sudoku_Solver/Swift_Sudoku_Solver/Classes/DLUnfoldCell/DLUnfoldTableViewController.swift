@@ -43,23 +43,20 @@ class DLUnfoldTableViewController: UIViewController {
         return models;
     }()
     
-    override func loadView() {
-        view = UIView(frame: UIScreen.main.bounds)
-        let backImageView = UIImageView(image: UIImage(named: "iphonetall-background-x13"))
-        view.addSubview(backImageView)
-
-        view.addSubview(tableView)
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
-//        let selftableView = tableView
-//        print(tableView.style)
 
     }
     
     fileprivate func setupUI(){
+        
+        var backgroundImage = UIImage(named: "iphonetall-background-x13")!
+        backgroundImage = backgroundImage.imageResize(sizeChange: CGSize.init(width: view.size.width, height: view.size.height))
+        view.backgroundColor = UIColor(patternImage: backgroundImage)
+
+        view.addSubview(tableView)
+        
         navigationItem.titleView = UILabel.titleLabel()
         
         tableView.backgroundColor = UIColor.clear

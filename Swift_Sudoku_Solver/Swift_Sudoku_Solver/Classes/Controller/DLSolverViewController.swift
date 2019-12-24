@@ -217,10 +217,12 @@ class DLSolverViewController: UIViewController {
     //MARK: UI搭建
     fileprivate func setupUI(){
         
-        
-        
         setupNav()
-        view.backgroundColor = UIColor(patternImage: UIImage(named: "iphonetall-background-x13")!)
+                
+        var backgroundImage = UIImage(named: "iphonetall-background-x13")!
+        backgroundImage = backgroundImage.imageResize(sizeChange: CGSize.init(width: view.size.width, height: view.size.height))
+        view.backgroundColor = UIColor(patternImage: backgroundImage)
+
         
         let helpButton = UIButton.init(type: .infoLight)
         helpButton.addTarget(self, action: #selector(helpAction), for: .touchUpInside)
