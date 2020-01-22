@@ -15,7 +15,6 @@
 		942302CA1E9A63D000F312B3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 942302C81E9A63D000F312B3 /* LaunchScreen.storyboard */; };
 		942302DD1E9A687300F312B3 /* DLCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942302D31E9A687300F312B3 /* DLCommon.swift */; };
 		942302DE1E9A687300F312B3 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942302D41E9A687300F312B3 /* UIView+Extension.swift */; };
-		942302DF1E9A687300F312B3 /* DLElementNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942302D81E9A687300F312B3 /* DLElementNumber.swift */; };
 		942302E01E9A687300F312B3 /* DLSudokuSolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942302D91E9A687300F312B3 /* DLSudokuSolver.swift */; };
 		942302E21E9A687300F312B3 /* DLNumberButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942302DC1E9A687300F312B3 /* DLNumberButton.swift */; };
 		942302E41E9A689B00F312B3 /* DLSolverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942302E31E9A689B00F312B3 /* DLSolverViewController.swift */; };
@@ -55,7 +54,6 @@
 		942302C91E9A63D000F312B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		942302D31E9A687300F312B3 /* DLCommon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DLCommon.swift; sourceTree = "<group>"; };
 		942302D41E9A687300F312B3 /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
-		942302D81E9A687300F312B3 /* DLElementNumber.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DLElementNumber.swift; sourceTree = "<group>"; };
 		942302D91E9A687300F312B3 /* DLSudokuSolver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DLSudokuSolver.swift; sourceTree = "<group>"; };
 		942302DC1E9A687300F312B3 /* DLNumberButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DLNumberButton.swift; sourceTree = "<group>"; };
 		942302E31E9A689B00F312B3 /* DLSolverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DLSolverViewController.swift; sourceTree = "<group>"; };
@@ -197,7 +195,6 @@
 		942302D71E9A687300F312B3 /* SudokuSolver */ = {
 			isa = PBXGroup;
 			children = (
-				942302D81E9A687300F312B3 /* DLElementNumber.swift */,
 				942302D91E9A687300F312B3 /* DLSudokuSolver.swift */,
 			);
 			path = SudokuSolver;
@@ -389,7 +386,6 @@
 				9437DF0A1EAB853E0002C4C3 /* DLHelpModel.swift in Sources */,
 				942302E01E9A687300F312B3 /* DLSudokuSolver.swift in Sources */,
 				942AE67E1EA0F76D00009CF2 /* UIButton+Extension.swift in Sources */,
-				942302DF1E9A687300F312B3 /* DLElementNumber.swift in Sources */,
 				942A70D41EADEFBE00D07D64 /* DLUnfoldGroupModel.swift in Sources */,
 				942FC2AE1EACD8420091BFF7 /* UILabel+Extension.swift in Sources */,
 				942A70D01EADEF7F00D07D64 /* DLUnfoldTableViewCell.swift in Sources */,

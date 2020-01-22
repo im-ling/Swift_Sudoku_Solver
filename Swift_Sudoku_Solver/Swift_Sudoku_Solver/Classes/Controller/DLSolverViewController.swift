@@ -456,10 +456,12 @@ extension DLSolverViewController{
                 self.tipAlertViewController?.addAction(cancelAction)
                 if DLSudokuSolver.sharedSudokuSolver.isUnavailableMap{
                 }else{
+                    print("the result count:\(DLSudokuSolver.sharedSudokuSolver.resultMap.count)")
                     if DLSudokuSolver.sharedSudokuSolver.resultMap.count == 1{
                         self.tipAlertViewController?.title = "Tips:"
                         self.tipAlertViewController?.message = "normalMap".localizedString()
-                    }else{
+                    }
+                    if DLSudokuSolver.sharedSudokuSolver.resultMap.count > 1{
                         self.tipAlertViewController?.title = "Tips:"
                         self.tipAlertViewController?.message = "multi_results".localizedString()
                     }
