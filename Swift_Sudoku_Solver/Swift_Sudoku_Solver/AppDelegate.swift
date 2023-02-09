@@ -29,9 +29,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         setNav(nav: nav)
 //        UIApplication.shared.statusBarStyle = .default
         UIApplication.shared.statusBarStyle = .lightContent
-        print(self)
-        print(UIApplication.shared)
+//        print(self)
+//        print(UIApplication.shared)
         // Override point for customization after application launch.
+        
+        AccountInfo.shared.start()
         return true
     }
     

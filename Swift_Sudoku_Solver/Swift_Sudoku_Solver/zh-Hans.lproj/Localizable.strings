@@ -6,6 +6,7 @@
   Copyright © 2017 Focus. All rights reserved.
 */
 "title" = "数 独 解";
+"titlePurchased" = "购 买";
 
 "solve" = "解答";
 "earser" = "橡皮";

@@ -3,11 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		0B8DC4BFCB668ECA31097E1F /* Pods_Swift_Sudoku_Solver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 013B3642BE90200F2D62FB8F /* Pods_Swift_Sudoku_Solver.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		3D7166122994F99800DE75FF /* PurchaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7166112994F99800DE75FF /* PurchaseViewController.swift */; };
+		3D71661529950B7C00DE75FF /* AccountInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D71661429950B7C00DE75FF /* AccountInfo.swift */; };
 		942302C01E9A63D000F312B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942302BF1E9A63D000F312B3 /* AppDelegate.swift */; };
 		942302C21E9A63D000F312B3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942302C11E9A63D000F312B3 /* ViewController.swift */; };
 		942302C51E9A63D000F312B3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 942302C31E9A63D000F312B3 /* Main.storyboard */; };
@@ -45,6 +47,8 @@
 
 /* Begin PBXFileReference section */
 		013B3642BE90200F2D62FB8F /* Pods_Swift_Sudoku_Solver.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Swift_Sudoku_Solver.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3D7166112994F99800DE75FF /* PurchaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseViewController.swift; sourceTree = "<group>"; };
+		3D71661429950B7C00DE75FF /* AccountInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountInfo.swift; sourceTree = "<group>"; };
 		49ADCBFDED3755F298CD58A0 /* Pods-Swift_Sudoku_Solver.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swift_Sudoku_Solver.release.xcconfig"; path = "Pods/Target Support Files/Pods-Swift_Sudoku_Solver/Pods-Swift_Sudoku_Solver.release.xcconfig"; sourceTree = "<group>"; };
 		942302BC1E9A63D000F312B3 /* SudokuSolver2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SudokuSolver2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		942302BF1E9A63D000F312B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -100,6 +104,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3D7166102994F97400DE75FF /* Purchased */ = {
+			isa = PBXGroup;
+			children = (
+				3D7166112994F99800DE75FF /* PurchaseViewController.swift */,
+			);
+			path = Purchased;
+			sourceTree = "<group>";
+		};
+		3D71661329950B7000DE75FF /* AcccountInfo */ = {
+			isa = PBXGroup;
+			children = (
+				3D71661429950B7C00DE75FF /* AccountInfo.swift */,
+			);
+			path = AcccountInfo;
+			sourceTree = "<group>";
+		};
 		3EA0DA7D52AA62DC78458C93 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -146,6 +166,8 @@
 		942302D11E9A687300F312B3 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				3D71661329950B7000DE75FF /* AcccountInfo */,
+				3D7166102994F97400DE75FF /* Purchased */,
 				942A70CC1EADEF4A00D07D64 /* DLUnfoldCell */,
 				9437DF0D1EAB8C220002C4C3 /* ShowInfo */,
 				942302D21E9A687300F312B3 /* Common */,
@@ -285,7 +307,7 @@
 				};
 			};
 			buildConfigurationList = 942302B71E9A63D000F312B3 /* Build configuration list for PBXProject "Swift_Sudoku_Solver" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -376,6 +398,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				942302C21E9A63D000F312B3 /* ViewController.swift in Sources */,
+				3D71661529950B7C00DE75FF /* AccountInfo.swift in Sources */,
 				94A147CA1EAA273800028EE5 /* String+Extension.swift in Sources */,
 				9437DF111EAB8C490002C4C3 /* DLShowInfoFlowLayout.swift in Sources */,
 				942302E41E9A689B00F312B3 /* DLSolverViewController.swift in Sources */,
@@ -393,6 +416,7 @@
 				942A70D61EADEFDA00D07D64 /* DLUnfoldDetailModel.swift in Sources */,
 				94AC7BCD23B0D843002428DC /* UIImage+Extension.swift in Sources */,
 				942302E21E9A687300F312B3 /* DLNumberButton.swift in Sources */,
+				3D7166122994F99800DE75FF /* PurchaseViewController.swift in Sources */,
 				942302C01E9A63D000F312B3 /* AppDelegate.swift in Sources */,
 				942302DE1E9A687300F312B3 /* UIView+Extension.swift in Sources */,
 				942A70D21EADEF9B00D07D64 /* DLUnfoldTableViewHeaderFooterView.swift in Sources */,
@@ -574,9 +598,9 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5G688TPL65;
+				DEVELOPMENT_TEAM = X66X3BGMSJ;
 				INFOPLIST_FILE = "Swift_Sudoku_Solver/zh-Hans.lproj/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -598,9 +622,9 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development: tobeabetterman_dl@163.com (45AC2T6M46)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5G688TPL65;
+				DEVELOPMENT_TEAM = X66X3BGMSJ;
 				INFOPLIST_FILE = "Swift_Sudoku_Solver/zh-Hans.lproj/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

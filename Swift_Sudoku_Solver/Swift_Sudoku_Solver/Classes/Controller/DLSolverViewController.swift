@@ -208,7 +208,10 @@ class DLSolverViewController: UIViewController {
         setupUI()
     }
     
-    
+    @objc fileprivate func purchase(){
+        navigationController?.pushViewController(PurchaseViewController(), animated: true)
+    }
+
     
     @objc fileprivate func helpAction(){
         navigationController?.pushViewController(DLUnfoldTableViewController(), animated: true)
@@ -223,7 +226,8 @@ class DLSolverViewController: UIViewController {
         backgroundImage = backgroundImage.imageResize(sizeChange: CGSize.init(width: view.size.width, height: view.size.height))
         view.backgroundColor = UIColor(patternImage: backgroundImage)
 
-        
+        navigationItem.leftBarButtonItem =  UIBarButtonItem.menuButton(self, action: #selector(purchase), imageName: "shopping-cart")
+
         let helpButton = UIButton.init(type: .infoLight)
         helpButton.addTarget(self, action: #selector(helpAction), for: .touchUpInside)
         navigationItem.rightBarButtonItem = UIBarButtonItem(customView: helpButton)
@@ -388,7 +392,6 @@ extension DLSolverViewController{
         }
         
         
-        
         if isSolving {
             tipAlertViewController = UIAlertController(title: "Solving~", message: "solvingMessage".localizedString(), preferredStyle: .alert)
             let cancelAction = UIAlertAction(title: "Okay~", style: .cancel, handler: nil)
@@ -396,6 +399,7 @@ extension DLSolverViewController{
             self.present(tipAlertViewController!, animated: true, completion: nil)
             return
         }
+        
         
         isSolving = true
         DispatchQueue.global().async {
@@ -471,5 +475,23 @@ extension DLSolverViewController{
             }
         }
         
+    }
+}
+
+
+
+extension UIBarButtonItem {
+
+    static func menuButton(_ target: Any?, action: Selector, imageName: String) -> UIBarButtonItem {
+        let button = UIButton(type: .system)
+        button.setImage(UIImage(named: imageName), for: .normal)
+        button.addTarget(target, action: action, for: .touchUpInside)
+
+        let menuBarItem = UIBarButtonItem(customView: button)
+        menuBarItem.customView?.translatesAutoresizingMaskIntoConstraints = false
+        menuBarItem.customView?.heightAnchor.constraint(equalToConstant: 24).isActive = true
+        menuBarItem.customView?.widthAnchor.constraint(equalToConstant: 24).isActive = true
+
+        return menuBarItem
     }
 }
