@@ -29,17 +29,12 @@ class DLUnfoldTableViewController: UIViewController {
         }
         
         let plistPath = Bundle.main.path(forResource: fileName, ofType: nil)!
-        
 //        let plistURL = URL(string: plistPath)!
         let plistURL = URL(fileURLWithPath: plistPath)
 //        let plistURL = URL(fileReferenceLiteralResourceName: fileName)
-        
         let data = try! Data(contentsOf:plistURL)
-        
-        if let struct_models: [DLUnfoldGroupModel] = try! PropertyListDecoder().decode([DLUnfoldGroupModel].self, from: data) {
-            models = struct_models
-        }
-        
+        var struct_models = try! PropertyListDecoder().decode([DLUnfoldGroupModel].self, from: data)
+        models = struct_models
         return models;
     }()
     
