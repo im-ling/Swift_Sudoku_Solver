@@ -400,6 +400,11 @@ extension DLSolverViewController{
             return
         }
         
+        if isTimesRunout() {
+            return
+        }
+        
+        AccountInfo.shared.solveCountLeft -= 1
         
         isSolving = true
         DispatchQueue.global().async {
@@ -422,6 +427,7 @@ extension DLSolverViewController{
                 }else{
                     self.numberMapToButtonMap(numberMap: DLSudokuSolver.sharedSudokuSolver.resultMap.first!, buttonMap: self.buttonMap)
                 }
+                AccountInfo.shared.saveProperties()
             }
         }
     }
@@ -443,6 +449,12 @@ extension DLSolverViewController{
             self.present(tipAlertViewController!, animated: true, completion: nil)
             return
         }
+        
+        if isTimesRunout() {
+            return
+        }
+        AccountInfo.shared.solveCountLeft -= 1
+        
         isSolving = true
         DispatchQueue.global().async {
             DLSudokuSolver.sharedSudokuSolver.originMap = self.buttonMapToNumberMap(buttonMap: self.buttonMap)
@@ -472,9 +484,21 @@ extension DLSolverViewController{
                 }
                 self.isSolving = false
                 self.present(self.tipAlertViewController!, animated: true, completion: nil)
+                AccountInfo.shared.saveProperties()
             }
         }
         
+    }
+    
+    func isTimesRunout() -> Bool {
+        if !AccountInfo.shared.isVip && AccountInfo.shared.solveCountLeft <= 0 {
+            tipAlertViewController = UIAlertController(title: "Oops~", message: "The times for solving problems is running out. Please buy a VIP membership.".localizedString(), preferredStyle: .alert)
+            let cancelAction = UIAlertAction(title: "Okay~", style: .cancel, handler: nil)
+            tipAlertViewController?.addAction(cancelAction)
+            self.present(tipAlertViewController!, animated: true, completion: nil)
+            return true
+        }
+        return false
     }
 }
 

@@ -19,3 +19,5 @@
 "errorMap" = "很抱歉的通知您，这个是个无解数独。";
 "solvingMessage" = "我们正在努力解答中，请稍等片刻~";
 "multi_results" = "这个是一个多解数独哦。";
+
+"The times for solving problems is running out. Please buy a VIP membership." = "问题解答次数已经用完，请购买vip会员.";

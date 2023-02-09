@@ -23,7 +23,7 @@ class AccountInfo {
         readProperties()
         if (!isNotFirst) {
             // 第一次
-            self.solveCountLeft = 20
+            self.solveCountLeft = 10
             isNotFirst = true
         }
         saveProperties()

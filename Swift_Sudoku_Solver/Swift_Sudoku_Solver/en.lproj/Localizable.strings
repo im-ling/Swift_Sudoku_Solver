@@ -19,3 +19,5 @@
 "errorMap" = "The map can't be solve,please try another one~";
 "solvingMessage" = "The puzzle is solving,please wait a moment~";
 "multi_results" = "There are multi-results for the puzzle.";
+
+"The times for solving problems is running out. Please buy a VIP membership." = "The times for solving problems is running out. Please buy a VIP membership.";
