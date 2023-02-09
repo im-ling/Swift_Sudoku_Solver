@@ -1,12 +1,23 @@
 PODS:
-  - SnapKit (4.2.0)
+  - SnapKit (5.6.0)
+  - STSwiftIAP (1.0.0)
 
 DEPENDENCIES:
   - SnapKit
+  - STSwiftIAP (from `../../STSwiftIAP`)
+
+SPEC REPOS:
+  trunk:
+    - SnapKit
+
+EXTERNAL SOURCES:
+  STSwiftIAP:
+    :path: "../../STSwiftIAP"
 
 SPEC CHECKSUMS:
-  SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
+  SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
+  STSwiftIAP: 36ba8d23693065f2885cdb20ab4f179e262ec57a
 
-PODFILE CHECKSUM: 0e523f2fc92238fd28615ff0078689cd7eae2c80
+PODFILE CHECKSUM: 538e92dc08f9c39b248a0b1075651e4e8ea0a331
 
-COCOAPODS: 1.2.0
+COCOAPODS: 1.11.3

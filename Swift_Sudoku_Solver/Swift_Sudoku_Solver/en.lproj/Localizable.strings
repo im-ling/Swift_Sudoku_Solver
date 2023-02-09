@@ -9,6 +9,8 @@
 "title" = "Sudoku Solver";
 "titlePurchased" = "Purchase";
 
+"Purchase" = "Purchase";
+
 "solve" = "Solve";
 "earser" = "Eraser";
 "check" = "Check";
@@ -24,3 +26,5 @@
 
 "Purchase VIP" = "Purchase VIP";
 "Restore" = "Restore";
+
+"Purchase VIP Failed, Please check your netWork." = "Purchase VIP Failed, Please check your netWork.";

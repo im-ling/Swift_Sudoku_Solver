@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import StoreKit
+import STSwiftIAP
 
 class PurchaseViewController: UIViewController {
     
@@ -64,7 +65,30 @@ class PurchaseViewController: UIViewController {
 //    }
     
     @objc func purchaseVip() -> Void {
-        print("purchaseVip")
+        Task.init {
+            guard let product = STSwiftIAP.shared.product(from: product_id_vip) else {
+                showErrorMessage(title: "Purchase".localizedString() + " VIP", message: "Purchase VIP Failed, Please check your netWork.".localizedString())
+                return
+            }
+                
+            do {
+                let result = try await STSwiftIAP.shared.purchase(product)
+                if result.purchaseState == .purchased {
+                    AccountInfo.shared.isVip = true
+                    AccountInfo.shared.saveProperties()
+                }
+                showErrorMessage(title: "Purchase".localizedString() + " VIP", message: "Purchase".localizedString() + " VIP " + result.purchaseState.shortDescription())
+            } catch {
+                showErrorMessage(title: "Purchase".localizedString() + " VIP", message: "Purchase".localizedString() + " VIP failed")
+            }
+        }
+    }
+    
+    func showErrorMessage(title:String? , message:String?){
+        let alertVc = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let cancelAction = UIAlertAction(title: "Okay~", style: .cancel, handler: nil)
+        alertVc.addAction(cancelAction)
+        self.present(alertVc, animated: true, completion: nil)
     }
     
     @objc func restore() -> Void {

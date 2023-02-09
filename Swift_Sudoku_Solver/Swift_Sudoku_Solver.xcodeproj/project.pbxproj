@@ -10,6 +10,7 @@
 		0B8DC4BFCB668ECA31097E1F /* Pods_Swift_Sudoku_Solver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 013B3642BE90200F2D62FB8F /* Pods_Swift_Sudoku_Solver.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		3D7166122994F99800DE75FF /* PurchaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7166112994F99800DE75FF /* PurchaseViewController.swift */; };
 		3D71661529950B7C00DE75FF /* AccountInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D71661429950B7C00DE75FF /* AccountInfo.swift */; };
+		3D716617299531C500DE75FF /* Products.storekit in Resources */ = {isa = PBXBuildFile; fileRef = 3D716616299531C500DE75FF /* Products.storekit */; };
 		942302C01E9A63D000F312B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942302BF1E9A63D000F312B3 /* AppDelegate.swift */; };
 		942302C21E9A63D000F312B3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942302C11E9A63D000F312B3 /* ViewController.swift */; };
 		942302C51E9A63D000F312B3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 942302C31E9A63D000F312B3 /* Main.storyboard */; };
@@ -49,6 +50,7 @@
 		013B3642BE90200F2D62FB8F /* Pods_Swift_Sudoku_Solver.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Swift_Sudoku_Solver.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D7166112994F99800DE75FF /* PurchaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseViewController.swift; sourceTree = "<group>"; };
 		3D71661429950B7C00DE75FF /* AccountInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountInfo.swift; sourceTree = "<group>"; };
+		3D716616299531C500DE75FF /* Products.storekit */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Products.storekit; sourceTree = "<group>"; };
 		49ADCBFDED3755F298CD58A0 /* Pods-Swift_Sudoku_Solver.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swift_Sudoku_Solver.release.xcconfig"; path = "Pods/Target Support Files/Pods-Swift_Sudoku_Solver/Pods-Swift_Sudoku_Solver.release.xcconfig"; sourceTree = "<group>"; };
 		942302BC1E9A63D000F312B3 /* SudokuSolver2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SudokuSolver2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		942302BF1E9A63D000F312B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -150,6 +152,7 @@
 		942302BE1E9A63D000F312B3 /* Swift_Sudoku_Solver */ = {
 			isa = PBXGroup;
 			children = (
+				3D716616299531C500DE75FF /* Products.storekit */,
 				942302D11E9A687300F312B3 /* Classes */,
 				942302BF1E9A63D000F312B3 /* AppDelegate.swift */,
 				942302C11E9A63D000F312B3 /* ViewController.swift */,
@@ -274,7 +277,6 @@
 				942302B91E9A63D000F312B3 /* Frameworks */,
 				942302BA1E9A63D000F312B3 /* Resources */,
 				FC947A1FC68D17B588D507AD /* [CP] Embed Pods Frameworks */,
-				8755ECD31E5BA456934643F6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -338,6 +340,7 @@
 				942FC2AA1EACCDDE0091BFF7 /* DLNewFeatureCN.plist in Resources */,
 				942FC2B01EACDE580091BFF7 /* DLHelpListEN.plist in Resources */,
 				942302C71E9A63D000F312B3 /* Assets.xcassets in Resources */,
+				3D716617299531C500DE75FF /* Products.storekit in Resources */,
 				942302C51E9A63D000F312B3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -345,34 +348,22 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		8755ECD31E5BA456934643F6 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Swift_Sudoku_Solver/Pods-Swift_Sudoku_Solver-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		DE822E82364920B4C2672D40 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Swift_Sudoku_Solver-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FC947A1FC68D17B588D507AD /* [CP] Embed Pods Frameworks */ = {
@@ -380,14 +371,16 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Swift_Sudoku_Solver/Pods-Swift_Sudoku_Solver-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Swift_Sudoku_Solver/Pods-Swift_Sudoku_Solver-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Swift_Sudoku_Solver/Pods-Swift_Sudoku_Solver-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Swift_Sudoku_Solver/Pods-Swift_Sudoku_Solver-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -605,7 +598,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = test.DL.SudokuSolver2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.LL.SudokuSolver4;
 				PRODUCT_NAME = SudokuSolver2;
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -629,7 +622,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = test.DL.SudokuSolver2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.LL.SudokuSolver4;
 				PRODUCT_NAME = SudokuSolver2;
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";

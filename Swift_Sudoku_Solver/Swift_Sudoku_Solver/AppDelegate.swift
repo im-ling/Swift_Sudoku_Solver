@@ -7,9 +7,11 @@
 //
 
 import UIKit
+import STSwiftIAP
 
 let sudokuVersionKey = "varsion"
 let sudokuVersion = "1.0"
+let product_id_vip = "com.LL.SudokuSolver.VIP"
 
 @UIApplicationMain
 
@@ -34,6 +36,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         AccountInfo.shared.start()
+        
+        let _ = STSwiftIAP.shared.start(productIds: [product_id_vip])
+
         return true
     }
     

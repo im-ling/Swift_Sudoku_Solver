@@ -1,0 +1,48 @@
+{
+  "identifier" : "2B418075",
+  "nonRenewingSubscriptions" : [
+
+  ],
+  "products" : [
+    {
+      "displayPrice" : "1.0",
+      "familyShareable" : false,
+      "internalID" : "48594F7A",
+      "localizations" : [
+        {
+          "description" : "Swift_Sudoku_Solver_VIP",
+          "displayName" : "VIP Membership",
+          "locale" : "en_US"
+        },
+        {
+          "description" : "Swift_Sudoku_Solver_VIP",
+          "displayName" : "VIP Membership",
+          "locale" : "en_GB"
+        }
+      ],
+      "productID" : "com.LL.SudokuSolver.VIP",
+      "referenceName" : "Swift_Sudoku_Solver_VIP",
+      "type" : "NonConsumable"
+    }
+  ],
+  "settings" : {
+    "_askToBuyEnabled" : false,
+    "_billingIssuesEnabled" : false,
+    "_failTransactionsEnabled" : false,
+    "_locale" : "en_US",
+    "_storefront" : "USA",
+    "_storeKitError" : 0,
+    "_timeRate" : 0
+  },
+  "subscriptionGroups" : [
+
+  ],
+  "subscriptionOffersKeyPair" : {
+    "id" : "5509FCF1",
+    "privateKey" : "MIGTAgEAMBMGByqGSM49AgEGCCqGSM49AwEHBHkwdwIBAQQgmJ/0G8gYMyOHVltbD5jhlxrH4xPOrPwQ7MaxFFRmJ/ygCgYIKoZIzj0DAQehRANCAAR5L/4NGKsB9lNjQrE46EpPiAthZOVjn7uVPvOZnFBBXnGYAnIncBuT6ojTObFPP+n9I5K6O1u5/GZmwJFPTp2x"
+  },
+  "version" : {
+    "major" : 2,
+    "minor" : 0
+  }
+}
