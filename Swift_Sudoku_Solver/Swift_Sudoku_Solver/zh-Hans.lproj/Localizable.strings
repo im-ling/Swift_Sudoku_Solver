@@ -27,3 +27,8 @@
 "Purchase VIP" = "购买会员";
 "Restore" = "恢复购买";
 "Purchase VIP Failed, Please check your netWork." = "购买vip失败，无法获取App Store 的商品，请检查你的网络";
+"You are VIP, don't need to purchase again" = "你已经是VIP了，不需要再购买";
+
+"Restore Success" = "恢复购买成功";
+"Restore Failed" = "恢复购买失败";
+"No transaction Found" = "没有发现交易信息";

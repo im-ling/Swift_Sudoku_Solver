@@ -613,7 +613,6 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development: tobeabetterman_dl@163.com (45AC2T6M46)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = X66X3BGMSJ;
 				INFOPLIST_FILE = "Swift_Sudoku_Solver/zh-Hans.lproj/Info.plist";

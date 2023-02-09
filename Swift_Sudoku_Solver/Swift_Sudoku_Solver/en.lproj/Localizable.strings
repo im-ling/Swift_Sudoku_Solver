@@ -28,3 +28,9 @@
 "Restore" = "Restore";
 
 "Purchase VIP Failed, Please check your netWork." = "Purchase VIP Failed, Please check your netWork.";
+"You are VIP, don't need to purchase again" = "You are VIP, don't need to purchase again";
+
+
+"Restore Success" = "Restore Success";
+"Restore Failed" = "Restore Failed";
+"No transaction Found" = "No transaction Found";

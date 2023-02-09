@@ -65,6 +65,9 @@ class PurchaseViewController: UIViewController {
 //    }
     
     @objc func purchaseVip() -> Void {
+        if (AccountInfo.shared.isVip) {
+            showErrorMessage(title: "Oppos~", message: "You are VIP, don't need to purchase again".localizedString())
+        }
         Task.init {
             guard let product = STSwiftIAP.shared.product(from: product_id_vip) else {
                 showErrorMessage(title: "Purchase".localizedString() + " VIP", message: "Purchase VIP Failed, Please check your netWork.".localizedString())
@@ -94,6 +97,18 @@ class PurchaseViewController: UIViewController {
     @objc func restore() -> Void {
         Task.init {
             try? await AppStore.sync()
+            let result = await STSwiftIAP.shared.currentEntitlements()
+            if (result.contains(product_id_vip)){
+                AccountInfo.shared.isVip = true;
+                AccountInfo.shared.saveProperties()
+                showErrorMessage(title: "Restore Success".localizedString(), message: nil)
+            }else{
+                showErrorMessage(title: "Restore Failed".localizedString(), message: "No transaction Found".localizedString())
+            }
         }
+    }
+    
+    func showNoNetWorkErrorMessage() -> Void {
+        showErrorMessage(title: "Purchase".localizedString() + " VIP", message: "Purchase VIP Failed, Please check your netWork.".localizedString())
     }
 }
