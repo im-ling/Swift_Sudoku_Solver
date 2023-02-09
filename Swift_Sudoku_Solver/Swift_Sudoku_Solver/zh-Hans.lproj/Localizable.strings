@@ -21,3 +21,7 @@
 "multi_results" = "这个是一个多解数独哦。";
 
 "The times for solving problems is running out. Please buy a VIP membership." = "问题解答次数已经用完，请购买vip会员.";
+
+
+"Purchase VIP" = "购买会员";
+"Restore" = "恢复购买";
